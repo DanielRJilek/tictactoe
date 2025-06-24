@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: bisque;
+}
+
+.header {
+    min-height: 10vh;
+}
+
+.content {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 50vh;
+    width: 50vh;
+    margin: auto;
+    font-size: 3vh;
+}
+
+.row1 {
+    border-bottom: 2px solid black;
+}
+
+.row2 {
+    border-bottom: 2px solid black;
+}
+
+.column1 {
+    border-right: 2px solid black;
+}
+
+.column2 {
+    border-right: 2px solid black;
+}
