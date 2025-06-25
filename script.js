@@ -1,6 +1,6 @@
 // factory for objects
-function createPlayer(name, id) {
-    return { name, id };
+function createPlayer(name, id, symbol) {
+    return { name, id, symbol };
 }
 
 // IIFE for singleton object
@@ -16,7 +16,7 @@ function gameboard() {
     this.move = function(x, y, player) {
         console.log(board[x][y])
         if (board[x][y] == null) {
-            board[x][y] = player.id;
+            board[x][y] = player.symbol;
             return true;
         }
         else {
@@ -32,8 +32,8 @@ function gameboard() {
 function gameController() {  
     const board = gameboard();
     let winner = null;
-    let player1 = createPlayer(1,1);
-    let player2 = createPlayer(2,2);
+    let player1 = createPlayer(1,1, "O");
+    let player2 = createPlayer(2,2, "X");
     let turn = 1;
     let currentPlayer = player1;
     let finished = 0;
@@ -121,6 +121,8 @@ function gameController() {
 function screenController() {
     const game = gameController();
     const boardDiv = document.querySelector(".board");
+    const startButton = document.querySelector("#start");
+    startButton.addEventListener("click", start);
 
     const squareButtons = document.querySelectorAll(".square button");
     // let row = 0;
@@ -168,10 +170,16 @@ function screenController() {
         if (game.getFinished() == 0) {
             game.playRound(selectedRow, selectedColumn);
             updateScreen();
+            if (game.getFinished() != 0) {
+                boardDiv.removeEventListener("click", clickHandler);
+                // Add messages and check for tie, move this to new 'end' function
+            }
         }
     }
 
-    boardDiv.addEventListener("click", clickHandler)
+    function start() {
+        boardDiv.addEventListener("click", clickHandler);
+    }
 };
 
 
