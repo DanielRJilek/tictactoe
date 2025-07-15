@@ -186,8 +186,10 @@ function screenController() {
 screenController();
 
 
-export class Game {
+class Game {
     constructor() {
-        
+
     }
 }
+
+export {Game}
