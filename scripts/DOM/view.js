@@ -6,6 +6,12 @@ class View {
         this.container = document.querySelector(".container");
     }
 
+    clearPage() {
+        while (this.container.firstChild) {
+            this.container.lastChild.remove();
+        }
+    }
+
     renderTitlePage() {
         this.clearPage();
         const titlePage = new TitlePage(this, this.container);
@@ -19,11 +25,7 @@ class View {
         return 1;
     }
 
-    clearPage() {
-        while (this.container.firstChild) {
-            this.container.lastChild.remove();
-        }
-    }
+    
 }
 
 export {View}
