@@ -12,10 +12,10 @@ class TitlePage {
     }
 
     createButtons(title_page) {
-        const tictactoe = document.createElement("button");
-        tictactoe.textContent = "Tic-tac-toe";
-        tictactoe.setAttribute("id", "tictactoe-button")
-        title_page.appendChild(tictactoe);
+        const play = document.createElement("button");
+        play.textContent = "Play";
+        play.setAttribute("id", "play-button")
+        title_page.appendChild(play);
 
         const about = document.createElement("button");
         about.textContent = "About";

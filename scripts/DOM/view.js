@@ -1,5 +1,6 @@
-import {TitlePage} from "./TitlePage.js"
-import {AboutPage} from "./AboutPage.js"
+import { TitlePage } from "./TitlePage.js"
+import { AboutPage } from "./AboutPage.js"
+import { GameList } from "./GameList.js";
 
 class View {
     constructor() {
@@ -16,6 +17,12 @@ class View {
         this.clearPage();
         const titlePage = new TitlePage(this, this.container);
         titlePage.render();
+    }
+
+    renderGameList() {
+        this.clearPage();
+        const gameList = new GameList(this, this.container);
+        gameList.render();
     }
 
     renderAboutPage() {
