@@ -6,8 +6,8 @@ class View {
     }
 
     renderTitlePage() {
-        const titlePage = new TitlePage();
-        titlePage.render(this, this.container);
+        const titlePage = new TitlePage(this, this.container);
+        titlePage.render();
     }
 
     renderAboutPage() {
