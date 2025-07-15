@@ -4,12 +4,6 @@ class TitlePage {
         this.container = container;
     }
 
-    createHeader() {
-        const header = document.createElement("div");
-        // header.setAttribute("")
-        header.classList.add("header")
-    }
-
     createTitle(title_page) {
         const title = document.createElement("div");
         title.textContent = "Libro de los Juegos";
@@ -33,8 +27,9 @@ class TitlePage {
     render() {
         const title_page = document.createElement("div");
         title_page.setAttribute("id", "title-page");
-        createTitle(title_page);
-        createButtons(title_page);
+        // createTitle(title_page);
+        this.createTitle(title_page);
+        this.createButtons(title_page);
         this.container.appendChild(title_page);
     }
 }
