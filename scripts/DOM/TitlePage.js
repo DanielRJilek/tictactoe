@@ -15,6 +15,7 @@ class TitlePage {
         const play = document.createElement("button");
         play.textContent = "Play";
         play.setAttribute("id", "play-button")
+        play.addEventListener("click", this.view.renderGameList.bind(this.view));
         title_page.appendChild(play);
 
         const about = document.createElement("button");
