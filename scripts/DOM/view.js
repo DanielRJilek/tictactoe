@@ -11,7 +11,7 @@ class View {
     }
 
     renderAboutPage() {
-        return;
+        return 1;
     }
 
     clearPage() {
