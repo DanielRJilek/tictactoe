@@ -1,4 +1,4 @@
-import {Controller} from "./DOM/controller.js";
+import {Controller} from "./controller.js";
 import {View} from "./DOM/view.js"
 
 let view = new View();
