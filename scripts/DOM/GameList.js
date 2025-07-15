@@ -15,6 +15,16 @@ class GameList {
         doblet.setAttribute("id", "doblet-button");
         title_page.appendChild(doblet);
 
+        const nineMorris = document.createElement("button");
+        nineMorris.textContent = "Nine Men's Morris";
+        nineMorris.setAttribute("id", "ninemorris-button");
+        title_page.appendChild(nineMorris);
+
+        const alquerque = document.createElement("button");
+        alquerque.textContent = "Alquerque";
+        alquerque.setAttribute("id", "alquerque-button");
+        title_page.appendChild(alquerque);
+
         const back = document.createElement("button");
         back.textContent = "Back";
         back.setAttribute("id", "back-button");
