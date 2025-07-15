@@ -1,4 +1,5 @@
 import {TitlePage} from "./TitlePage.js"
+import {AboutPage} from "./AboutPage.js"
 
 class View {
     constructor() {
@@ -6,11 +7,15 @@ class View {
     }
 
     renderTitlePage() {
+        this.clearPage();
         const titlePage = new TitlePage(this, this.container);
         titlePage.render();
     }
 
     renderAboutPage() {
+        this.clearPage();
+        const aboutPage = new AboutPage(this, this.container);
+        aboutPage.render();
         return 1;
     }
 
