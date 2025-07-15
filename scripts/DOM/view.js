@@ -19,7 +19,7 @@ class View {
     }
 
     renderAboutPage() {
-        clearPage();
+        this.clearPage();
         const aboutPage = new AboutPage(this, this.container);
         aboutPage.render();
         return 1;
