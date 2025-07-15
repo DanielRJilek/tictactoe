@@ -21,7 +21,7 @@ class TitlePage {
         about.textContent = "About";
         about.setAttribute("id", "id-button");
         title_page.appendChild(about);
-        about.addEventListener("click", this.view.renderAboutPage());
+        // about.addEventListener("click", this.view.renderAboutPage());
     }
 
     render() {
