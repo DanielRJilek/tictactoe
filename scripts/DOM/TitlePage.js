@@ -20,7 +20,7 @@ class TitlePage {
         const about = document.createElement("button");
         about.textContent = "About";
         about.setAttribute("id", "id-button");
-        about.addEventListener("click", this.view.renderAboutPage());
+        about.addEventListener("click", this.view.renderAboutPage);
         title_page.appendChild(about);
         
     }
