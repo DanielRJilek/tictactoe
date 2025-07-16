@@ -59,7 +59,8 @@ body {
     margin: 2.5vh 0;
 }
 
-#title-page button:hover {
+#title-page button:hover,
+#about-page button:hover {
     box-shadow: 0 0 10px darkorange;
 }
 
@@ -68,6 +69,7 @@ body {
     background-color: rgb(233, 175, 134);
     margin: 2.5vh 10vw;
     min-width: 500px;
+    flex: 1;
 }
 
 .slideshow {
