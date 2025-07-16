@@ -20,7 +20,7 @@ class AboutPage {
 
         const slide1 = document.createElement("div");
         slide1.classList.add("slide", "fade");
-        slide1.style.backgroundImage = "url('.../images/Alfonso_X_el_Sabio_y_su_corte.jpg')"
+        slide1.style.backgroundImage = "url('../../images/Alfonso_X_el_Sabio_y_su_corte.jpg')"
         const caption1 = document.createElement("div");
         caption1.classList.add("caption");
         slide1.appendChild(caption1)
