@@ -27,6 +27,22 @@ class AboutPage {
         slide1.appendChild(caption1)
         slideshow.appendChild(slide1);
 
+        const slide2 = document.createElement("div");
+        slide2.classList.add("slide", "fade");
+        slide2.setAttribute("id", "slide2");
+        const caption2 = document.createElement("div");
+        caption2.classList.add("caption");
+        slide2.appendChild(caption2)
+        slideshow.appendChild(slide2);
+
+        const slide3 = document.createElement("div");
+        slide3.classList.add("slide", "fade");
+        slide3.setAttribute("id", "slide3");
+        const caption3 = document.createElement("div");
+        caption3.classList.add("caption");
+        slide3.appendChild(caption3)
+        slideshow.appendChild(slide3);
+
         content.appendChild(slideshow);
         
         about_page.appendChild(content);
