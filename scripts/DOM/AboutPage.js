@@ -20,7 +20,8 @@ class AboutPage {
 
         const slide1 = document.createElement("div");
         slide1.classList.add("slide", "fade");
-        slide1.style.backgroundImage = "url(.tictactoe/images/Alfonso.jpg)"
+        slide1.setAttribute("id", "slide1");
+        // slide1.style.backgroundImage = "url(/images/Alfonso.jpg)"
         const caption1 = document.createElement("div");
         caption1.classList.add("caption");
         slide1.appendChild(caption1)
