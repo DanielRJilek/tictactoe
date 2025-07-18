@@ -74,13 +74,14 @@ body {
 }
 
 .slideshow {
-
+    height: 30%;
 }
 
 .slide {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    
 }
 
 #slide1 {
