@@ -44,6 +44,10 @@ class AboutPage {
         slideshow.appendChild(slide3);
 
         content.appendChild(slideshow);
+
+        const aboutText = document.createElement("div");
+        aboutText.setAttribute("id", "about-text");
+        content.appendChild(aboutText);
         
         about_page.appendChild(content);
     }

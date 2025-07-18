@@ -71,10 +71,12 @@ body {
     margin: 2.5vh 10vw;
     min-width: calc(max(500px, 80vw));
     flex: 1;
+    display: flex;
 }
 
 .slideshow {
     height: 30%;
+    flex: 1;
 }
 
 .slide {
@@ -94,6 +96,10 @@ body {
 
 #slide3 {
     background-image: url(./images/Alquerque_in_Libro_de_los_juegos.jpg);
+}
+
+#about-text {
+    flex: 2;
 }
 
 
