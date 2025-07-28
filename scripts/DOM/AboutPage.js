@@ -3,13 +3,14 @@ class AboutPage {
         this.view = view;
         this.container = container;
         this.slideIndex = 1;
+        const self = this;
     }
 
     createButtons(about_page) {
         const back = document.createElement("button");
         back.textContent = "Back";
         back.setAttribute("id", "back-button");
-        back.addEventListener("click", this.view.renderTitlePage.bind(this.view));
+        back.addEventListener("click", self.view.renderTitlePage());
         about_page.appendChild(back);
     }
 
@@ -37,13 +38,13 @@ class AboutPage {
         leftButton.classList.add("slideButton");
         leftButton.textContent = "<";
         leftButton.onclick = function() {
-            this.nextSlide(-1);
+            nextSlide(-1, self);
         }
         const rightButton = document.createElement("div");
         rightButton.classList.add("slideButton");
         rightButton.textContent = ">";
         rightButton.onclick = function() {
-            this.nextSlide(1);
+            nextSlide(1, self);
         }
         slideshow.appendChild(leftButton);
         slideshow.appendChild(rightButton);
@@ -57,9 +58,9 @@ class AboutPage {
         about_page.appendChild(content);
     }
 
-    nextSlide(n) {
-        this.slideIndex += n;
-        this.showSlides(n);
+    nextSlide(n, self) {
+        self.slideIndex += n;
+        self.showSlides(n);
     }
 
     showSlides(n) {
