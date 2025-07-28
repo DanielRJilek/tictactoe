@@ -61,7 +61,7 @@ class AboutPage {
         let slides = document.getElementsByClassName("slide");
         this.slideIndex += n;
         if (this.slideIndex > slides.length - 1) {this.slideIndex = 0}
-        else if (this.slideIndex < 0) {this.slideIndex = this.slideIndex - 1};
+        else if (this.slideIndex < 0) {this.slideIndex = this.slideIndex.length - 1};
         this.showSlides(this.slideIndex);
     }
 
