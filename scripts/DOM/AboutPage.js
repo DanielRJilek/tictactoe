@@ -35,13 +35,13 @@ class AboutPage {
         }
 
         const leftButton = document.createElement("div");
-        leftButton.classList.add("slideButton");
+        leftButton.classList.add("slide-button");
         leftButton.textContent = "<";
-        leftButton.onclick = () => this.showSlides(-1);
+        leftButton.onclick = () => this.nextSlide(-1);
         const rightButton = document.createElement("div");
         rightButton.classList.add("slide-button");
         rightButton.textContent = ">";
-        rightButton.onclick = () => this.showSlides(1);
+        rightButton.onclick = () => this.nextSlide(1);
         slideshow.appendChild(leftButton);
         slideshow.appendChild(rightButton);
 
