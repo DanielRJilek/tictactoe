@@ -88,7 +88,7 @@ class AboutPage {
         for (let i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        slides[slideIndex-1].style.display = "block"; 
+        slides[this.slideIndex-1].style.display = "block"; 
     }
 
     render() {
