@@ -50,7 +50,7 @@ body {
     max-width: 15vw;
     min-width: 160px;
     font-family: tangerine;
-    font-size: calc(max(3vw, 48px));
+    font-size: calc(max(3vw, 36px));
     text-align: center;
     border: solid rgb(177, 86, 21);
     border-radius: 100rem;
@@ -74,29 +74,7 @@ body {
     display: flex;
 }
 
-.slideshow {
-    height: 30%;
-    flex: 1;
-}
 
-.slide {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    
-}
-
-#slide1 {
-    background-image: url(./images/Alfonso.jpg);
-}
-
-#slide2 {
-    background-image: url(./images/ChristianAndMuslimPlayingChess.jpg);
-}
-
-#slide3 {
-    background-image: url(./images/Alquerque_in_Libro_de_los_juegos.jpg);
-}
 
 #about-text {
     flex: 2;
