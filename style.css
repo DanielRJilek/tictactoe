@@ -106,12 +106,8 @@ body {
 
 .slide-button {
     font-family: Verdana, sans-serif;
-    position: relative;
     cursor: pointer;
-    top: 0%;
-    /* width: auto; */
     padding: 16px;
-    /* margin-top: -22px; */
     color: white;
     font-weight: bold;
     font-size: 36px;
@@ -124,7 +120,7 @@ body {
     background-color: rgba(0,0,0,0.8);
 }
 
-#slideshow {
+.slideshow {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
