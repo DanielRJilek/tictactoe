@@ -9,7 +9,7 @@ class AboutPage {
         const back = document.createElement("button");
         back.textContent = "Back";
         back.setAttribute("id", "back-button");
-        back.addEventListener("click", self.view.renderTitlePage());
+        back.addEventListener("click", this.view.renderTitlePage.bind(this.view));
         about_page.appendChild(back);
     }
 
