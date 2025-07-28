@@ -1,0 +1,3 @@
+../images/Alfonso.jpg
+../images/ChristianAndMuslimPlayingChess.jpg
+../images/Alquerque_in_Libro_de_los_juegos.jpg

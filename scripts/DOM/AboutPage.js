@@ -19,9 +19,14 @@ class AboutPage {
         const slideshow = document.createElement("div");
         slideshow.classList.add("slideshow");
 
+        let slideImages = this.getSlideImages("../images/slide_images.txt");
+
         for (let i=0; i < 3; i++) {
             const slide = document.createElement("div");
             slide.classList.add("slide", "fade");
+            const img = document.createElement("img");
+            img.src = slideImages[i];
+            slide.appendChild(img);
             const caption = document.createElement("div");
             caption.classList.add("caption");
             slide.appendChild(caption)
@@ -65,6 +70,12 @@ class AboutPage {
             slides[i].style.display = "none";
         }
         slides[this.slideIndex-1].style.display = "block"; 
+    }
+
+    async getSlideImages(file) {
+        let x = await fetch(file);
+        let y = await x.text();
+        return y;
     }
 
     render() {
