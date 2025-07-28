@@ -13,13 +13,13 @@ class AboutPage {
         about_page.appendChild(back);
     }
 
-    createContent(about_page) {
+    async createContent(about_page) {
         const content = document.createElement("div");
         content.setAttribute("id", "about-content");
         const slideshow = document.createElement("div");
         slideshow.classList.add("slideshow");
 
-        let slideImages = this.getSlideImages("./images/slide_images.txt");
+        let slideImages = await this.getSlideImages("./images/slide_images.txt");
 
         for (let i=0; i < 3; i++) {
             const slide = document.createElement("div");
