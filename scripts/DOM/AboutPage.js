@@ -78,11 +78,11 @@ class AboutPage {
         return y;
     }
 
-    render() {
+    async render() {
         const about_page = document.createElement("div");
         about_page.setAttribute("id", "about-page");
-        this.createContent(about_page).then(this.createButtons(about_page));
-
+        await this.createContent(about_page);
+        this.createButtons(about_page);
         this.container.appendChild(about_page);
         this.showSlides(1);
     }
