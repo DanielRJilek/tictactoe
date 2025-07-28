@@ -19,7 +19,7 @@ class AboutPage {
         const slideshow = document.createElement("div");
         slideshow.classList.add("slideshow");
 
-        let slideImages = await this.getSlideImages("./images/slide_images.txt");
+        let slideImages = (await this.getSlideImages("./images/slide_images.txt")).split("\n");
 
         for (let i=0; i < 3; i++) {
             const slide = document.createElement("div");
