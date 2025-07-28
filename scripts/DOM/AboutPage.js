@@ -38,13 +38,13 @@ class AboutPage {
         leftButton.classList.add("slideButton");
         leftButton.textContent = "<";
         leftButton.onclick = function() {
-            nextSlide(-1, self);
+            self.nextSlide(-1);
         }
         const rightButton = document.createElement("div");
         rightButton.classList.add("slideButton");
         rightButton.textContent = ">";
         rightButton.onclick = function() {
-            nextSlide(1, self);
+            self.nextSlide(1);
         }
         slideshow.appendChild(leftButton);
         slideshow.appendChild(rightButton);
@@ -58,9 +58,9 @@ class AboutPage {
         about_page.appendChild(content);
     }
 
-    nextSlide(n, self) {
-        self.slideIndex += n;
-        self.showSlides(n);
+    nextSlide(n) {
+        this.slideIndex += n;
+        this.showSlides(n);
     }
 
     showSlides(n) {
