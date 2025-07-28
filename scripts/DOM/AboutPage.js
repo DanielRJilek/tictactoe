@@ -3,7 +3,6 @@ class AboutPage {
         this.view = view;
         this.container = container;
         this.slideIndex = 1;
-        const self = this;
     }
 
     createButtons(about_page) {
@@ -37,15 +36,11 @@ class AboutPage {
         const leftButton = document.createElement("div");
         leftButton.classList.add("slideButton");
         leftButton.textContent = "<";
-        leftButton.onclick = function() {
-            self.nextSlide(-1);
-        }
+        leftButton.onclick = () => this.showSlides(-1);
         const rightButton = document.createElement("div");
         rightButton.classList.add("slideButton");
         rightButton.textContent = ">";
-        rightButton.onclick = function() {
-            self.nextSlide(1);
-        }
+        rightButton.onclick = () => this.showSlides(1);
         slideshow.appendChild(leftButton);
         slideshow.appendChild(rightButton);
 
