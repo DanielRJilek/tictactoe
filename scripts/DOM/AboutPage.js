@@ -34,6 +34,8 @@ class AboutPage {
             slideshow.appendChild(slide);
         }
 
+        const holder = document.createElement("div");
+        holder.classList.add("button-holder");
         const leftButton = document.createElement("div");
         leftButton.classList.add("slide-button");
         leftButton.textContent = "<";
@@ -42,8 +44,9 @@ class AboutPage {
         rightButton.classList.add("slide-button");
         rightButton.textContent = ">";
         rightButton.onclick = () => this.nextSlide(1);
-        slideshow.appendChild(leftButton);
-        slideshow.appendChild(rightButton);
+        holder.appendChild(leftButton);
+        holder.appendChild(rightButton);
+        slideshow.appendChild(holder);
 
         content.appendChild(slideshow);
 
