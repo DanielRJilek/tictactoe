@@ -22,7 +22,7 @@ class AboutPage {
 
         let slideImages = (await this.getSlideImages("./images/slide_images.txt")).split("\n");
 
-        for (let i=0; i < 3; i++) {
+        for (let i=0; i < slideImages.length; i++) {
             const slide = document.createElement("div");
             slide.classList.add("slide", "fade");
             const img = document.createElement("img");
@@ -60,7 +60,7 @@ class AboutPage {
     nextSlide(n) {
         let slides = document.getElementsByClassName("slide");
         this.slideIndex += n;
-        if (this.slideIndex > slides.length) {this.slideIndex = slides.length}
+        if (this.slideIndex > slides.length - 1) {this.slideIndex = slides.length - 1}
         else if (this.slideIndex < 0) {this.slideIndex = 0};
         this.showSlides(this.slideIndex);
     }
@@ -69,7 +69,7 @@ class AboutPage {
         for (let i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        slides[this.slideIndex].style.display = "block"; 
+        slides[n].style.display = "block"; 
     }
 
     async getSlideImages(file) {
