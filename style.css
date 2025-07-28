@@ -1,11 +1,11 @@
 @font-face {
     font-family: tangerine-bold;
-    src:url(../Tangerine/Tangerine-Bold.ttf);
+    src:url(./Tangerine/Tangerine-Bold.ttf);
 }
 
 @font-face {
     font-family: tangerine;
-    src:url(../Tangerine/Tangerine-Regular.ttf);
+    src:url(./Tangerine/Tangerine-Regular.ttf);
 }
 
 body {
@@ -37,7 +37,7 @@ body {
 #about-page {
     min-height: 100vh;
     min-width: 100vw;
-    background-image: url(../images/Alhambra_view.png);
+    background-image: url(./images/Alhambra_view.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
