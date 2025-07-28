@@ -61,7 +61,7 @@ class AboutPage {
         let slides = document.getElementsByClassName("slide");
         this.slideIndex += n;
         if (this.slideIndex > slides.length - 1) {this.slideIndex = 0}
-        else if (this.slideIndex < 0) {this.slideIndex = this.slideIndex.length - 1};
+        else if (this.slideIndex < 0) {this.slideIndex = slides.length - 1};
         this.showSlides(this.slideIndex);
     }
 
@@ -85,7 +85,7 @@ class AboutPage {
         await this.createContent(about_page);
         this.createButtons(about_page);
         this.container.appendChild(about_page);
-        this.showSlides(1);
+        this.showSlides(0);
     }
 }
 
