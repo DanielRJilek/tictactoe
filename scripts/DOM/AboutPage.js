@@ -9,6 +9,7 @@ class AboutPage {
         const back = document.createElement("button");
         back.textContent = "Back";
         back.setAttribute("id", "back-button");
+        // replace bind with arrow function????
         back.addEventListener("click", this.view.renderTitlePage.bind(this.view));
         about_page.appendChild(back);
     }
@@ -38,7 +39,7 @@ class AboutPage {
         leftButton.textContent = "<";
         leftButton.onclick = () => this.showSlides(-1);
         const rightButton = document.createElement("div");
-        rightButton.classList.add("slideButton");
+        rightButton.classList.add("slide-button");
         rightButton.textContent = ">";
         rightButton.onclick = () => this.showSlides(1);
         slideshow.appendChild(leftButton);
