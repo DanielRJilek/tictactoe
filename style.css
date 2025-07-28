@@ -145,6 +145,11 @@ body {
   animation-duration: 1.5s;
 }
 
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
 #about-text {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

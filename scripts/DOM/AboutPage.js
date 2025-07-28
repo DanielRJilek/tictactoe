@@ -59,7 +59,7 @@ class AboutPage {
 
     nextSlide(n) {
         this.slideIndex += n;
-        this.showSlides(n);
+        this.showSlides(this.slideIndex);
     }
 
     showSlides(n) {
