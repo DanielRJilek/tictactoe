@@ -2,7 +2,7 @@ class AboutPage {
     constructor(view, container) {
         this.view = view;
         this.container = container;
-        this.slideIndex = 1;
+        this.slideIndex = 0;
     }
 
     createButtons(about_page) {
@@ -58,18 +58,18 @@ class AboutPage {
     }
 
     nextSlide(n) {
+        let slides = document.getElementsByClassName("slide");
         this.slideIndex += n;
+        if (this.slideIndex > slides.length) {this.slideIndex = slides.length}
+        else if (this.slideIndex < 0) {this.slideIndex = 0};
         this.showSlides(this.slideIndex);
     }
 
     showSlides(n) {
-        let slides = document.getElementsByClassName("slide");
-        if (n > slides.length) {this.slideIndex = slides.length};
-        if (n < 1) {this.slideIndex = 1};
         for (let i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        slides[this.slideIndex-1].style.display = "block"; 
+        slides[this.slideIndex].style.display = "block"; 
     }
 
     async getSlideImages(file) {
