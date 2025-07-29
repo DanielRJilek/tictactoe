@@ -2,8 +2,8 @@ class GameList {
     constructor(view, container) {
         this.view = view;
         this.container = container;
-        this.imageHolder = null;
-        this.images = null;
+        this.imageHolder = document.createElement("div");;
+        this.images = [];
     }
 
     updateImage(i) {
@@ -44,8 +44,8 @@ class GameList {
     async render() {
         const title_page = document.createElement("div");
         title_page.setAttribute("id", "title-page");
-        const imageHolder = document.createElement("div");
-        imageHolder.setAttribute("id", "image-holder");
+        this.imageHolder.setAttribute("id", "image-holder");
+        title_page.append(this.imageHolder);
         const buttonHolder = document.createElement("div");
         buttonHolder.setAttribute("id", "games-holder");
         this.createButtons(buttonHolder);
@@ -56,7 +56,6 @@ class GameList {
         back.addEventListener("click", this.view.renderTitlePage.bind(this.view));
         title_page.appendChild(back);
         this.container.appendChild(title_page);
-        this.imageHolder = imageHolder;
         this.images = (await this.getFileContent("./images/game_images.txt")).split("\n");
     }
 }
