@@ -31,7 +31,8 @@ body {
 }
 
 #title-page,
-#about-page {
+#about-page,
+.game-page {
     min-height: 100vh;
     min-width: 100vw;
     background-image: url(./images/Alhambra_view.png);
@@ -51,7 +52,8 @@ body {
 }
 
 #title-page button,
-#about-page button {
+#about-page button,
+.game-page button {
     max-width: 15vw;
     min-width: 260px;
     max-height: 70px;
@@ -72,7 +74,8 @@ body {
 }
 
 #title-page button:hover,
-#about-page button:hover {
+#about-page button:hover,
+.game-page button:hover {
     box-shadow: 0 0 10px darkorange;
 }
 
