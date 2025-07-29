@@ -6,12 +6,12 @@ class GameList {
         this.images = [];
     }
 
-    async updateImage(i) {
+    updateImage(i) {
         while (this.imageHolder.firstChild) {
             this.imageHolder.lastChild.remove();
         }
         const img = document.createElement("img");
-        img.src = await images[i];
+        img.src = images[i];
         this.imageHolder.appendChild(img);
     }
 
@@ -19,29 +19,30 @@ class GameList {
         const tictactoe = document.createElement("button");
         tictactoe.textContent = "Tic-tac-toe";
         tictactoe.setAttribute("id", "tictactoe-button");
-        tictactoe.addEventListener("mouseover", this.updateImage(0).bind(this))
+        tictactoe.addEventListener("mouseover", () => this.updateImage(0))
         title_page.appendChild(tictactoe);
 
         const nineMorris = document.createElement("button");
         nineMorris.textContent = "Nine Men's Morris";
         nineMorris.setAttribute("id", "ninemorris-button");
-        nineMorris.addEventListener("mouseover", this.updateImage(1).bind(this))
+        nineMorris.addEventListener("mouseover", () => this.updateImage(1))
         title_page.appendChild(nineMorris);
 
         const alquerque = document.createElement("button");
         alquerque.textContent = "Alquerque";
         alquerque.setAttribute("id", "alquerque-button");
-        alquerque.addEventListener("mouseover", this.updateImage(2).bind(this))
+        alquerque.addEventListener("mouseover", () => this.updateImage(2))
         title_page.appendChild(alquerque);
 
         const doblet = document.createElement("button");
         doblet.textContent = "Doblet";
         doblet.setAttribute("id", "doblet-button");
-        doblet.addEventListener("mouseover", this.updateImage(3).bind(this))
+        doblet.addEventListener("mouseover", () => this.updateImage(3))
         title_page.appendChild(doblet);        
     }
 
     async render() {
+        this.images = (await this.getFileContent("./images/game_images.txt")).split("\n");
         const title_page = document.createElement("div");
         title_page.setAttribute("id", "title-page");
         this.imageHolder.setAttribute("id", "image-holder");
@@ -56,7 +57,6 @@ class GameList {
         back.addEventListener("click", this.view.renderTitlePage.bind(this.view));
         title_page.appendChild(back);
         this.container.appendChild(title_page);
-        this.images = (await this.getFileContent("./images/game_images.txt")).split("\n");
     }
 }
 
