@@ -14,14 +14,11 @@ class AboutPage {
         about_page.appendChild(back);
     }
 
-    async createContent(about_page) {
-        const content = document.createElement("div");
-        content.setAttribute("id", "about-content");
+    async createSlides(content) {
         const slideshow = document.createElement("div");
         slideshow.classList.add("slideshow");
-
-        let slideImages = (await this.getSlideImages("./images/slide_images.txt")).split("\n");
-
+        let slideImages = await (this.getFileContent("./images/slide_images.txt")).split("\n");
+        let captions = await (await this.getFileContent("./images/captions.txt")).split("\n");
         for (let i=0; i < slideImages.length - 1; i++) {
             const slide = document.createElement("div");
             slide.classList.add("slide", "fade");
@@ -30,6 +27,7 @@ class AboutPage {
             slide.appendChild(img);
             const caption = document.createElement("div");
             caption.classList.add("caption");
+            caption.textContent = captions[i];
             slide.appendChild(caption)
             slideshow.appendChild(slide);
         }
@@ -49,11 +47,21 @@ class AboutPage {
         slideshow.appendChild(holder);
 
         content.appendChild(slideshow);
+    }
 
+    async createAboutText(content) {
+        let text = (await this.getSlidePaths("./images/about.txt")).split("\n");
         const aboutText = document.createElement("div");
         aboutText.setAttribute("id", "about-text");
+        aboutText.textContent = text;
         content.appendChild(aboutText);
-        
+    }
+
+    async createContent(about_page) {
+        const content = document.createElement("div");
+        content.setAttribute("id", "about-content");
+        await this.createSlides(content);
+        this.createAboutText(content);
         about_page.appendChild(content);
     }
 
@@ -73,7 +81,7 @@ class AboutPage {
         slides[n].style.display = "block"; 
     }
 
-    async getSlideImages(file) {
+    async getFileContent(file) {
         let x = await fetch(file);
         let y = await x.text();
         return y;
