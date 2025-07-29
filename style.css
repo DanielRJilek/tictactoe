@@ -43,6 +43,10 @@ body {
     box-sizing: border-box;
 }
 
+.game-page {
+    background-image: url(./images/seville_alcazar.jpeg);
+}
+
 #title {
     font-size: calc(max(10vw, 96px));
     min-width: 500px;

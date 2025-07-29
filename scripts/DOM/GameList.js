@@ -20,6 +20,7 @@ class GameList {
         tictactoe.textContent = "Tic-tac-toe";
         tictactoe.setAttribute("id", "tictactoe-button");
         tictactoe.addEventListener("mouseover", () => this.updateImage(0))
+        tictactoe.addEventListener("click", this.view.renderTictactoe.bind(this.view));
         title_page.appendChild(tictactoe);
 
         const nineMorris = document.createElement("button");
