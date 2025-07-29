@@ -41,6 +41,12 @@ class GameList {
         title_page.appendChild(doblet);        
     }
 
+    async getFileContent(file) {
+        let x = await fetch(file);
+        let y = await x.text();
+        return y;
+    }
+
     async render() {
         this.images = (await this.getFileContent("./images/game_images.txt")).split("\n");
         const title_page = document.createElement("div");
