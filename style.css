@@ -85,12 +85,14 @@ body {
 
 #image-holder img {
     width: calc(max(500px, 80vw));
+    height: calc(max(500px, 55vh));
 }
 
 #games-holder {
     width: calc(max(500px, 80vw));
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #about-content {
