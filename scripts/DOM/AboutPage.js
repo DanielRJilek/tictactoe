@@ -18,7 +18,7 @@ class AboutPage {
         const slideshow = document.createElement("div");
         slideshow.classList.add("slideshow");
         let slideImages = await (this.getFileContent("./images/slide_images.txt")).split("\n");
-        let captions = await (await this.getFileContent("./images/captions.txt")).split("\n");
+        let captions = await (this.getFileContent("./images/captions.txt")).split("\n");
         for (let i=0; i < slideImages.length - 1; i++) {
             const slide = document.createElement("div");
             slide.classList.add("slide", "fade");
@@ -61,7 +61,7 @@ class AboutPage {
         const content = document.createElement("div");
         content.setAttribute("id", "about-content");
         await this.createSlides(content);
-        this.createAboutText(content);
+        await this.createAboutText(content);
         about_page.appendChild(content);
     }
 
