@@ -37,7 +37,7 @@ class View {
     }
 
     renderTictactoe() {
-        let fanfare = new Audio('./audio/cantigas.mp3')
+        let fanfare = new Audio('./audio/medieval-fanfare.mp3')
         fanfare.play();
         this.clearPage();
         const tictactoe = new Tictactoe(this, this.container);
