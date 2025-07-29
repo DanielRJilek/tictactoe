@@ -6,12 +6,12 @@ class GameList {
         this.images = [];
     }
 
-    updateImage(i) {
+    async updateImage(i) {
         while (this.imageHolder.firstChild) {
             this.imageHolder.lastChild.remove();
         }
         const img = document.createElement("img");
-        img.src = images[i];
+        img.src = await images[i];
         this.imageHolder.appendChild(img);
     }
 
