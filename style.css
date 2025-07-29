@@ -17,9 +17,6 @@ body {
 
 .container {
     min-height: 100vh;
-    /* background-color: bisque; */
-    /* background-image: url(./images/Alhambra-p3-wall.jpg);
-    background-position: center; */
 }
 
 #title-page {
@@ -152,10 +149,12 @@ body {
 
 #about-text {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 16px;
 }
 
 .caption {
     text-align: center;
+    font-weight: bold;
 }
 
 /* consider grids? */

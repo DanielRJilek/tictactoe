@@ -13,6 +13,7 @@ class View {
         }
     }
 
+    // refactor into one 'render' method 
     renderTitlePage() {
         this.clearPage();
         const titlePage = new TitlePage(this, this.container);
