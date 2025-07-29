@@ -27,18 +27,21 @@ class GameList {
         nineMorris.textContent = "Nine Men's Morris";
         nineMorris.setAttribute("id", "ninemorris-button");
         nineMorris.addEventListener("mouseover", () => this.updateImage(1))
+        nineMorris.addEventListener("click", this.view.renderNineMorris.bind(this.view));
         title_page.appendChild(nineMorris);
 
         const alquerque = document.createElement("button");
         alquerque.textContent = "Alquerque";
         alquerque.setAttribute("id", "alquerque-button");
         alquerque.addEventListener("mouseover", () => this.updateImage(2))
+        alquerque.addEventListener("click", this.view.renderAlquerque.bind(this.view));
         title_page.appendChild(alquerque);
 
         const doblet = document.createElement("button");
         doblet.textContent = "Doblet";
         doblet.setAttribute("id", "doblet-button");
         doblet.addEventListener("mouseover", () => this.updateImage(3))
+        doblet.addEventListener("click", this.view.renderDoblet.bind(this.view));
         title_page.appendChild(doblet);        
     }
 
