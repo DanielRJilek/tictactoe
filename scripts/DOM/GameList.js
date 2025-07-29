@@ -4,6 +4,7 @@ class GameList {
         this.container = container;
         this.imageHolder = document.createElement("div");;
         this.images = [];
+        this.audio_playing = false;
     }
 
     updateImage(i) {
@@ -63,8 +64,12 @@ class GameList {
         back.addEventListener("click", this.view.renderTitlePage.bind(this.view));
         title_page.appendChild(back);
         this.container.appendChild(title_page);
-        let audio = new Audio('./cantigas.mp3')
-        audio.play();
+        if (this.audio_playing == false) {
+            let audio = new Audio('./cantigas.mp3')
+            audio.play();
+            this.audio_playing = true;
+        }
+        
     }
 }
 
