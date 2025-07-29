@@ -2,6 +2,9 @@ import { TitlePage } from "./TitlePage.js"
 import { AboutPage } from "./AboutPage.js"
 import { GameList } from "./GameList.js"
 import { Tictactoe } from "./TictactoePage.js";
+import { NineMorris } from "./NineMorris.js";
+import { Alquerque } from "./Alquerque.js";
+import { Doblet } from "./Doblet.js";
 
 class View {
     constructor() {
@@ -42,6 +45,30 @@ class View {
         this.clearPage();
         const tictactoe = new Tictactoe(this, this.container);
         tictactoe.render();
+    }
+
+    renderNineMorris() {
+        let fanfare = new Audio('./audio/medieval-fanfare.mp3')
+        fanfare.play();
+        this.clearPage();
+        const nineMorris = new NineMorris(this, this.container);
+        nineMorris.render();
+    }
+
+    renderAlquerque() {
+        let fanfare = new Audio('./audio/medieval-fanfare.mp3')
+        fanfare.play();
+        this.clearPage();
+        const alquerque = new Alquerque(this, this.container);
+        alquerque.render();
+    }
+
+    renderDoblet() {
+        let fanfare = new Audio('./audio/medieval-fanfare.mp3')
+        fanfare.play();
+        this.clearPage();
+        const doblet = new Doblet(this, this.container);
+        doblet.render();
     }
 
     

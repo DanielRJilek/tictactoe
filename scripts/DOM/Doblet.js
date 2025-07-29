@@ -1,28 +1,28 @@
-class Tictactoe {
+class Doblet {
     constructor(view, container) {
         this.view = view;
         this.container = container;
     }
 
     render() {
-        const tictactoe = document.createElement("div");
-        tictactoe.classList.add("game-page");
-        tictactoe.setAttribute("id", "tictactoe-page");
+        const doblet = document.createElement("div");
+        doblet.classList.add("game-page");
+        doblet.setAttribute("id", "doblet-page");
 
         const back = document.createElement("button");
         back.textContent = "Back";
         back.setAttribute("id", "back-button");
         back.addEventListener("click", this.view.renderGameList.bind(this.view));
-        tictactoe.appendChild(back);
+        doblet.appendChild(back);
 
         const board = document.createElement("div");
         board.classList.add("board");
-        board.setAttribute("id", "tictactoe-board");
+        board.setAttribute("id", "doblet-board");
 
 
-        this.container.appendChild(tictactoe);
+        this.container.appendChild(doblet);
     }
 
 }
 
-export { Tictactoe }
+export { Doblet }
