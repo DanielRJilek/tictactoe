@@ -94,6 +94,11 @@ class AboutPage {
         this.createButtons(about_page);
         this.container.appendChild(about_page);
         this.showSlides(0);
+        if (this.view.audio_playing == false) {
+            let audio = new Audio('./audio/cantigas.mp3')
+            audio.play();
+            this.view.audio_playing = true;
+        }
     }
 }
 

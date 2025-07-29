@@ -1,6 +1,7 @@
 import { TitlePage } from "./TitlePage.js"
 import { AboutPage } from "./AboutPage.js"
-import { GameList } from "./GameList.js";
+import { GameList } from "./GameList.js"
+import { Tictactoe } from "./TictactoePage.js";
 
 class View {
     constructor() {
@@ -33,6 +34,14 @@ class View {
         const aboutPage = new AboutPage(this, this.container);
         aboutPage.render();
         return 1;
+    }
+
+    renderTictactoe() {
+        let fanfare = new Audio('./audio/cantigas.mp3')
+        fanfare.play();
+        this.clearPage();
+        const tictactoe = new Tictactoe(this, this.container);
+        tictactoe.render();
     }
 
     
