@@ -17,8 +17,8 @@ class AboutPage {
     async createSlides(content) {
         const slideshow = document.createElement("div");
         slideshow.classList.add("slideshow");
-        let slideImages = await (this.getFileContent("./images/slide_images.txt")).split("\n");
-        let captions = await (this.getFileContent("./images/captions.txt")).split("\n");
+        let slideImages = (await this.getFileContent("./images/slide_images.txt")).split("\n");
+        let captions = (await this.getFileContent("./images/captions.txt")).split("\n");
         for (let i=0; i < slideImages.length - 1; i++) {
             const slide = document.createElement("div");
             slide.classList.add("slide", "fade");
@@ -50,7 +50,7 @@ class AboutPage {
     }
 
     async createAboutText(content) {
-        let text = (await this.getSlidePaths("./images/about.txt")).split("\n");
+        let text = (await this.getFileContent("./images/about.txt")).split("\n");
         const aboutText = document.createElement("div");
         aboutText.setAttribute("id", "about-text");
         aboutText.textContent = text;
