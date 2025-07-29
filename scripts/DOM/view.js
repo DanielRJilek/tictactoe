@@ -5,6 +5,7 @@ import { GameList } from "./GameList.js";
 class View {
     constructor() {
         this.container = document.querySelector(".container");
+        this.audio_playing = false;
     }
 
     clearPage() {
