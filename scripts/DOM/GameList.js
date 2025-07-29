@@ -64,7 +64,7 @@ class GameList {
         title_page.appendChild(back);
         this.container.appendChild(title_page);
         if (this.view.audio_playing == false) {
-            let audio = new Audio('./cantigas.mp3')
+            let audio = new Audio('./audio/cantigas.mp3')
             audio.play();
             this.view.audio_playing = true;
         }

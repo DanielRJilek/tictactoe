@@ -6,6 +6,7 @@ class View {
     constructor() {
         this.container = document.querySelector(".container");
         this.audio_playing = false;
+        this.page = null;
     }
 
     clearPage() {
