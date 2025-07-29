@@ -2,41 +2,62 @@ class GameList {
     constructor(view, container) {
         this.view = view;
         this.container = container;
+        this.imageHolder = null;
+        this.images = null;
+    }
+
+    updateImage(i) {
+        while (this.imageHolder.firstChild) {
+            this.imageHolder.lastChild.remove();
+        }
+        const img = document.createElement("img");
+        img.src = images[i];
+        this.imageHolder.appendChild(img);
     }
 
     createButtons(title_page) {
         const tictactoe = document.createElement("button");
         tictactoe.textContent = "Tic-tac-toe";
         tictactoe.setAttribute("id", "tictactoe-button");
+        tictactoe.addEventListener("mouseover", this.updateImage(0).bind(this))
         title_page.appendChild(tictactoe);
-
-        const doblet = document.createElement("button");
-        doblet.textContent = "Doblet";
-        doblet.setAttribute("id", "doblet-button");
-        title_page.appendChild(doblet);
 
         const nineMorris = document.createElement("button");
         nineMorris.textContent = "Nine Men's Morris";
         nineMorris.setAttribute("id", "ninemorris-button");
+        nineMorris.addEventListener("mouseover", this.updateImage(1).bind(this))
         title_page.appendChild(nineMorris);
 
         const alquerque = document.createElement("button");
         alquerque.textContent = "Alquerque";
         alquerque.setAttribute("id", "alquerque-button");
+        alquerque.addEventListener("mouseover", this.updateImage(2).bind(this))
         title_page.appendChild(alquerque);
 
+        const doblet = document.createElement("button");
+        doblet.textContent = "Doblet";
+        doblet.setAttribute("id", "doblet-button");
+        doblet.addEventListener("mouseover", this.updateImage(3).bind(this))
+        title_page.appendChild(doblet);        
+    }
+
+    async render() {
+        const title_page = document.createElement("div");
+        title_page.setAttribute("id", "title-page");
+        const imageHolder = document.createElement("div");
+        imageHolder.setAttribute("id", "image-holder");
+        const buttonHolder = document.createElement("div");
+        buttonHolder.setAttribute("id", "games-holder");
+        this.createButtons(buttonHolder);
+        title_page.append(buttonHolder);
         const back = document.createElement("button");
         back.textContent = "Back";
         back.setAttribute("id", "back-button");
         back.addEventListener("click", this.view.renderTitlePage.bind(this.view));
         title_page.appendChild(back);
-    }
-
-    render() {
-        const title_page = document.createElement("div");
-        title_page.setAttribute("id", "title-page");
-        this.createButtons(title_page);
         this.container.appendChild(title_page);
+        this.imageHolder = imageHolder;
+        this.images = (await this.getFileContent("./images/game_images.txt")).split("\n");
     }
 }
 

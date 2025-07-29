@@ -1,5 +1,4 @@
-images/Alfonso.jpg
+images/Tic_Tac_Toe.jpg
 images/Nine_Men's_Morris_with_dice_in_Libro_de_los_juegos.jpg
 images/Alquerque_in_Libro_de_los_juegos.jpg
-images/Alfonso-todas-tablas.jpg
-images/chess_players.png
+images/doblet.jpg

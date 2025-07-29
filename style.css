@@ -76,6 +76,16 @@ body {
     box-shadow: 0 0 10px darkorange;
 }
 
+#image-holder {
+    min-width: calc(max(500px, 80vw));
+}
+
+#games-holder {
+    min-width: calc(max(500px, 80vw));
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #about-content {
     border: 4px solid rgb(177, 86, 21);
     background-color: rgb(249, 201, 166);
