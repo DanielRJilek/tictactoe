@@ -20,9 +20,15 @@ class TitlePage {
 
         const about = document.createElement("button");
         about.textContent = "About";
-        about.setAttribute("id", "id-button");
+        about.setAttribute("id", "about-button");
         about.addEventListener("click", this.view.renderAboutPage.bind(this.view));
         title_page.appendChild(about);
+
+        const music = document.createElement("button");
+        music.textContent = "Music";
+        music.setAttribute("id", "music-button");
+        music.addEventListener("click", this.view.renderMusicPage.bind(this.view));
+        title_page.appendChild(music);
         
     }
 

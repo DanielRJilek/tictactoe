@@ -5,6 +5,7 @@ import { Tictactoe } from "./TictactoePage.js";
 import { NineMorris } from "./NineMorris.js";
 import { Alquerque } from "./Alquerque.js";
 import { Doblet } from "./Doblet.js";
+import { MusicPage } from "./MusicPage.js";
 
 class View {
     constructor() {
@@ -69,6 +70,13 @@ class View {
         this.clearPage();
         const doblet = new Doblet(this, this.container);
         doblet.render();
+    }
+
+    renderMusicPage() {
+        this.clearPage();
+        const musicPage = new MusicPage(this, this.container);
+        musicPage.render();
+        return 1;
     }
 
     
