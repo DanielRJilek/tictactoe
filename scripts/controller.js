@@ -8,8 +8,6 @@ class Controller {
 
     start() {
         this.view.renderTitlePage();
-        let audio = new Audio('cantigas.mp3')
-        audio.play();
     }
 
 
