@@ -11,7 +11,7 @@ class GameList {
             this.imageHolder.lastChild.remove();
         }
         const img = document.createElement("img");
-        img.src = images[i];
+        img.src = this.images[i];
         this.imageHolder.appendChild(img);
     }
 
