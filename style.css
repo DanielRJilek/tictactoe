@@ -17,6 +17,10 @@ body {
 
 .container {
     min-height: 100vh;
+    background-image: url(./images/Alhambra_view.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #title-page {
@@ -35,10 +39,10 @@ body {
 .game-page {
     min-height: 100vh;
     min-width: 100vw;
-    background-image: url(./images/Alhambra_view.png);
+    /* background-image: url(./images/Alhambra_view.png);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     font-family: tangerine-bold;
     box-sizing: border-box;
 }
