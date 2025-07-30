@@ -64,6 +64,7 @@ body {
 
 #title-page button,
 #about-page button,
+#music-page button,
 .game-page button {
     max-width: 15vw;
     min-width: 260px;
@@ -86,6 +87,7 @@ body {
 
 #title-page button:hover,
 #about-page button:hover,
+#music-page button:hover,
 .game-page button:hover {
     box-shadow: 0 0 10px darkorange;
 }
