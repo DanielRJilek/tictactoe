@@ -39,10 +39,6 @@ body {
 .game-page {
     min-height: 100vh;
     min-width: 100vw;
-    /* background-image: url(./images/Alhambra_view.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
     font-family: tangerine-bold;
     box-sizing: border-box;
 }
@@ -124,6 +120,10 @@ body {
     /* grid-template-rows: 1fr 2fr; */
 }
 
+title {
+    text-align: center;
+}
+
 @media screen and (min-width: 1200px) {
     .slide img, 
     #about-content {
@@ -199,5 +199,5 @@ body {
     font-size: 16px;
 }
 
-/* consider grids? */
+/* consider more grids? */
 
