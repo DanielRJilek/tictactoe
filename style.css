@@ -23,7 +23,8 @@ body {
     background-repeat: no-repeat;
 }
 
-#title-page {
+#title-page,
+#music-page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,11 +37,13 @@ body {
 
 #title-page,
 #about-page,
+#music-page,
 .game-page {
     min-height: 100vh;
     min-width: 100vw;
     font-family: tangerine-bold;
     box-sizing: border-box;
+    overflow: auto;
 }
 
 .game-page {

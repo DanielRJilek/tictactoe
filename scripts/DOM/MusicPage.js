@@ -33,6 +33,7 @@ class MusicPage {
         // await this.createSlides(content);
         const title = document.createElement("title");
         title.textContent = "Cantigas de Santa Maria";
+        content.appendChild(title);
         await this.createAboutText(content);
         music_page.appendChild(content);
     }
