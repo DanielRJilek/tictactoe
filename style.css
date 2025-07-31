@@ -36,6 +36,7 @@ body {
 }
 
 #title-page,
+#list-page,
 #about-page,
 #music-page,
 .game-page {
@@ -44,6 +45,10 @@ body {
     font-family: tangerine-bold;
     box-sizing: border-box;
     overflow: auto;
+}
+
+#list-page {
+    transition: 0.3s ease;
 }
 
 .game-page {

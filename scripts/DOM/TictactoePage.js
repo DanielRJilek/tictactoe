@@ -6,7 +6,7 @@ class Tictactoe {
 
     render() {
         const tictactoe = document.createElement("div");
-        tictactoe.classList.add("game-page");
+        tictactoe.classList.add("game-page", "slow-fade");
         tictactoe.setAttribute("id", "tictactoe-page");
 
         const back = document.createElement("button");
