@@ -54,6 +54,7 @@ class GameList {
     async render() {
         this.images = (await this.getFileContent("./images/game_images.txt")).split("\n");
         const title_page = document.createElement("div");
+        title_page.classList.add("slow-fade");
         title_page.setAttribute("id", "title-page");
         this.imageHolder.setAttribute("id", "image-holder");
         title_page.append(this.imageHolder);
