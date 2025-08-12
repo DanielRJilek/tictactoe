@@ -19,7 +19,7 @@ class AboutPage {
         slideshow.classList.add("slideshow");
         let slideImages = (await this.getFileContent("./images/about_slide_images.txt")).split("\n");
         let captions = (await this.getFileContent("./images/about_slide_captions.txt")).split("\n");
-        for (let i=0; i < slideImages.length - 1; i++) {
+        for (let i=0; i < slideImages.length; i++) {
             const slide = document.createElement("div");
             slide.classList.add("slide", "fade");
             const img = document.createElement("img");
