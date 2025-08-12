@@ -56,6 +56,7 @@ class AboutPage {
         aboutText.setAttribute("id", "about-text");
         for (let i = 0; i < paragraphs.length; i++) {
             const p = document.createElement("p");
+            p.style = "text-indent: 2rem";
             p.innerHTML = paragraphs[i];
             aboutText.appendChild(p);
         }
