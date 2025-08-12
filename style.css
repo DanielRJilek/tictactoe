@@ -67,6 +67,7 @@ body {
 }
 
 #title-page button,
+#list-page button,
 #about-page button,
 #music-page button,
 .game-page button {
@@ -90,6 +91,7 @@ body {
 }
 
 #title-page button:hover,
+#list-page button:hover,
 #about-page button:hover,
 #music-page button:hover,
 .game-page button:hover {
