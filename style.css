@@ -146,6 +146,7 @@ h1 {
 
 .slide img {
     max-width: calc(max(80vw, 500px));
+    max-height: calc(min(30vh, 500px));
 }
 
 .slide-button {

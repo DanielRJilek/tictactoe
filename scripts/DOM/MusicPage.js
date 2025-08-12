@@ -80,12 +80,29 @@ class MusicPage {
         music_page.appendChild(content);
     }
 
+    nextSlide(n) {
+        let slides = document.getElementsByClassName("slide");
+        this.slideIndex += n;
+        if (this.slideIndex > slides.length - 1) {this.slideIndex = 0}
+        else if (this.slideIndex < 0) {this.slideIndex = slides.length - 1};
+        this.showSlides(this.slideIndex);
+    }
+
+    showSlides(n) {
+        let slides = document.getElementsByClassName("slide");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[n].style.display = "block"; 
+    }
+
     async render() {
         const music_page = document.createElement("div");
         music_page.setAttribute("id", "music-page");
         await this.createContent(music_page);
         this.createButtons(music_page);
         this.container.appendChild(music_page);
+        this.showSlides(0);
         if (this.view.audio_playing == false) {
             let audio = new Audio('./audio/cantigas.mp3')
             audio.play();
