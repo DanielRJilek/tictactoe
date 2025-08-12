@@ -24,6 +24,7 @@ body {
 }
 
 #title-page,
+#list-page,
 #music-page {
     display: flex;
     flex-direction: column;
