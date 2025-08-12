@@ -21,9 +21,15 @@ class MusicPage {
 
     async createAboutText(content) {
         let text = await this.getFileContent("./images/music.txt");
+        let paragraphs = text.split('\n');
         const aboutText = document.createElement("div");
         aboutText.setAttribute("id", "about-text");
-        aboutText.textContent = text;
+        for (let i = 0; i < paragraphs.length; i++) {
+            const p = document.createElement("p");
+            p.style = "text-indent: 2rem";
+            p.innerHTML = paragraphs[i];
+            aboutText.appendChild(p);
+        }
         content.appendChild(aboutText);
     }
 
