@@ -54,9 +54,9 @@ class AboutPage {
         let paragraphs = text.split('\n');
         const aboutText = document.createElement("div");
         aboutText.setAttribute("id", "about-text");
-        for (let paragraph in paragraphs) {
+        for (let i = 0; i < paragraphs.length; i++) {
             const p = document.createElement("p");
-            p.innerHTML = paragraph;
+            p.innerHTML = paragraphs[i];
             aboutText.appendChild(p);
         }
         content.appendChild(aboutText);
