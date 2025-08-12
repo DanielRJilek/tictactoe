@@ -2,6 +2,7 @@ class MusicPage {
     constructor(view, container) {
         this.view = view;
         this.container = container;
+        this.slideIndex = 0;
     }
 
     createButtons(music_page) {
