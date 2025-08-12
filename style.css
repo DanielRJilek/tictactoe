@@ -135,6 +135,11 @@ h1 {
     text-align: center;
 }
 
+.slide img {
+    max-width: calc(max(80vw, 500px));
+    max-height: calc(max(30vh, 500px));
+}
+
 @media screen and (min-width: 1200px) {
     .slide img, 
     #about-content {
@@ -142,11 +147,6 @@ h1 {
         max-width: 972px;
         min-width: 0px;
     }    
-}
-
-.slide img {
-    max-width: calc(max(80vw, 500px));
-    max-height: calc(min(30vh, 500px));
 }
 
 .slide-button {
