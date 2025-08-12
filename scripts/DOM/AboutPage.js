@@ -51,9 +51,14 @@ class AboutPage {
 
     async createAboutText(content) {
         let text = await this.getFileContent("./images/about.txt");
+        let paragraphs = text.split('\n');
         const aboutText = document.createElement("div");
         aboutText.setAttribute("id", "about-text");
-        aboutText.textContent = text;
+        for (let paragraph in paragraphs) {
+            const p = document.createElement("p");
+            p.innerHTML = paragraph;
+            aboutText.appendChild(p);
+        }
         content.appendChild(aboutText);
     }
 
