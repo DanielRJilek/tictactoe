@@ -13,6 +13,41 @@ class MusicPage {
         music_page.appendChild(back);
     }
 
+    async createSlides(content) {
+        const slideshow = document.createElement("div");
+        slideshow.classList.add("slideshow");
+        let slideImages = (await this.getFileContent("./images/music_slide_images.txt")).split("\n");
+        let captions = (await this.getFileContent("./images/music_slide_captions.txt")).split("\n");
+        for (let i=0; i < slideImages.length - 1; i++) {
+            const slide = document.createElement("div");
+            slide.classList.add("slide", "fade");
+            const img = document.createElement("img");
+            img.src = slideImages[i];
+            slide.appendChild(img);
+            const caption = document.createElement("div");
+            caption.classList.add("caption");
+            caption.textContent = captions[i];
+            slide.appendChild(caption)
+            slideshow.appendChild(slide);
+        }
+
+        const holder = document.createElement("div");
+        holder.classList.add("button-holder");
+        const leftButton = document.createElement("div");
+        leftButton.classList.add("slide-button");
+        leftButton.textContent = "<";
+        leftButton.onclick = () => this.nextSlide(-1);
+        const rightButton = document.createElement("div");
+        rightButton.classList.add("slide-button");
+        rightButton.textContent = ">";
+        rightButton.onclick = () => this.nextSlide(1);
+        holder.appendChild(leftButton);
+        holder.appendChild(rightButton);
+        slideshow.appendChild(holder);
+
+        content.appendChild(slideshow);
+    }
+
     async getFileContent(file) {
         let x = await fetch(file);
         let y = await x.text();
@@ -40,6 +75,7 @@ class MusicPage {
         const title = document.createElement("h1");
         title.textContent = "Cantigas de Santa Maria";
         content.appendChild(title);
+        await this.createSlides(content);
         await this.createAboutText(content);
         music_page.appendChild(content);
     }
