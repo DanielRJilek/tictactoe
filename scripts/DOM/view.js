@@ -44,7 +44,7 @@ class View {
         let fanfare = new Audio('./audio/medieval-fanfare.mp3')
         fanfare.play();
         this.clearPage();
-        const tictactoe = new Tictactoe(this, this.container);
+        const tictactoe = new TictactoePage(this, this.container);
         tictactoe.render();
     }
 

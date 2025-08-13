@@ -1,4 +1,4 @@
-class Tictactoe {
+class TictactoePage {
     constructor(view, container) {
         this.view = view;
         this.container = container;
@@ -15,6 +15,12 @@ class Tictactoe {
         back.addEventListener("click", this.view.renderGameList.bind(this.view));
         tictactoe.appendChild(back);
 
+        const help = document.createElement("button");
+        help.textContent = "Help";
+        help.setAttribute("id", "help-button");
+        // back.addEventListener("click", this.view.renderGameList.bind(this.view));
+        tictactoe.appendChild(help);
+
         const board = document.createElement("div");
         board.classList.add("board");
         board.setAttribute("id", "tictactoe-board");
@@ -25,4 +31,4 @@ class Tictactoe {
 
 }
 
-export { Tictactoe }
+export { TictactoePage }
