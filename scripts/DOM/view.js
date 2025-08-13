@@ -1,7 +1,7 @@
 import { TitlePage } from "./TitlePage.js"
 import { AboutPage } from "./AboutPage.js"
 import { GameList } from "./GameList.js"
-import { Tictactoe } from "./TictactoePage.js";
+import { TictactoePage } from "./TictactoePage.js";
 import { NineMorris } from "./NineMorris.js";
 import { Alquerque } from "./Alquerque.js";
 import { Doblet } from "./Doblet.js";
