@@ -62,3 +62,5 @@ class Tictactoe {
 
     }
 }
+
+export { Tictactoe }
