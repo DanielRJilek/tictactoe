@@ -1,7 +1,7 @@
 class Tictactoe {
     constructor() {
-        this.player1 = new Player();
-        this.player2 = new Player();
+        // this.player1 = new Player();
+        // this.player2 = new Player();
         this.board = new Array(3);
         for (let i = 0; i < 3; i++) {
             this.board[i] = new Array(3);
