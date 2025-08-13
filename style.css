@@ -216,3 +216,36 @@ h1 {
 #about-content h1 {
     font-size: 48px;
 }
+
+/* Tictactoe */
+.board-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tictactoe-board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 50vh;
+    width: 50vh;
+    margin: auto;
+    font-size: 3vh;
+}
+
+.row1 {
+    border-bottom: 2px solid black;
+}
+
+.row2 {
+    border-bottom: 2px solid black;
+}
+
+.column1 {
+    border-right: 2px solid black;
+}
+
+.column2 {
+    border-right: 2px solid black;
+}
