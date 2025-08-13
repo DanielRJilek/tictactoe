@@ -66,6 +66,8 @@ class AboutPage {
     async createContent(about_page) {
         const content = document.createElement("div");
         content.setAttribute("id", "about-content");
+        const title = document.createElement("h1");
+        title.textContent = "Libro de los Juegos";
         await this.createSlides(content);
         await this.createAboutText(content);
         about_page.appendChild(content);

@@ -213,3 +213,6 @@ h1 {
 
 /* consider more grids? */
 
+#about-content h1 {
+    font-size: 48px;
+}
