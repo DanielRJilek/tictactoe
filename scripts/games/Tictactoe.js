@@ -83,7 +83,7 @@ class Tictactoe {
                 return;
             }
             // game not over
-            else if (thisfinished == 0) {
+            else if (this.finished == 0) {
                 this.switchCurrentPlayer();
                 this.turn++;
                 return;
