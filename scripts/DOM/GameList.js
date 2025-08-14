@@ -52,7 +52,7 @@ class GameList {
     }
 
     async render() {
-        this.images = (await this.getFileContent("./images/game_images.txt")).split("\n");
+        this.images = (await this.getFileContent("./assets/game_images.txt")).split("\n");
         const title_page = document.createElement("div");
         title_page.setAttribute("id", "list-page");
         this.imageHolder.setAttribute("id", "image-holder");
@@ -68,7 +68,7 @@ class GameList {
         title_page.appendChild(back);
         this.container.appendChild(title_page);
         if (this.view.audio_playing == false) {
-            let audio = new Audio('./audio/cantigas.mp3')
+            let audio = new Audio('./assets/audio/cantigas.mp3')
             audio.play();
             this.view.audio_playing = true;
         }

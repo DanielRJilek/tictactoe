@@ -41,7 +41,7 @@ class View {
     }
 
     renderTictactoe() {
-        let fanfare = new Audio('./audio/medieval-fanfare.mp3')
+        let fanfare = new Audio('./assets/audio/medieval-fanfare.mp3')
         fanfare.play();
         this.clearPage();
         const tictactoe = new TictactoePage(this, this.container);
@@ -49,7 +49,7 @@ class View {
     }
 
     renderNineMorris() {
-        let fanfare = new Audio('./audio/medieval-fanfare.mp3')
+        let fanfare = new Audio('./assets/audio/medieval-fanfare.mp3')
         fanfare.play();
         this.clearPage();
         const nineMorris = new NineMorris(this, this.container);
@@ -57,7 +57,7 @@ class View {
     }
 
     renderAlquerque() {
-        let fanfare = new Audio('./audio/medieval-fanfare.mp3')
+        let fanfare = new Audio('./assets/audio/medieval-fanfare.mp3')
         fanfare.play();
         this.clearPage();
         const alquerque = new Alquerque(this, this.container);
@@ -65,7 +65,7 @@ class View {
     }
 
     renderDoblet() {
-        let fanfare = new Audio('./audio/medieval-fanfare.mp3')
+        let fanfare = new Audio('./assets/audio/medieval-fanfare.mp3')
         fanfare.play();
         this.clearPage();
         const doblet = new Doblet(this, this.container);

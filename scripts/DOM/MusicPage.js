@@ -17,8 +17,8 @@ class MusicPage {
     async createSlides(content) {
         const slideshow = document.createElement("div");
         slideshow.classList.add("slideshow");
-        let slideImages = (await this.getFileContent("./images/music_slide_images.txt")).split("\n");
-        let captions = (await this.getFileContent("./images/music_slide_captions.txt")).split("\n");
+        let slideImages = (await this.getFileContent("./assets/music_slide_images.txt")).split("\n");
+        let captions = (await this.getFileContent("./assets/music_slide_captions.txt")).split("\n");
         for (let i=0; i < slideImages.length; i++) {
             const slide = document.createElement("div");
             slide.classList.add("slide", "fade");
@@ -56,7 +56,7 @@ class MusicPage {
     }
 
     async createAboutText(content) {
-        let text = await this.getFileContent("./images/music.txt");
+        let text = await this.getFileContent("./assets/music.txt");
         let paragraphs = text.split('\n');
         const aboutText = document.createElement("div");
         aboutText.setAttribute("id", "about-text");
@@ -105,7 +105,7 @@ class MusicPage {
         this.container.appendChild(music_page);
         this.showSlides(0);
         if (this.view.audio_playing == false) {
-            let audio = new Audio('./audio/cantigas.mp3')
+            let audio = new Audio('./assets/audio/cantigas.mp3')
             audio.play();
             this.view.audio_playing = true;
         }
