@@ -41,10 +41,10 @@ class TictactoePage {
         if(!selectedColumn || !selectedRow) {
             return;
         }
-        if (game.gameOver() == 0) {
-            game.playRound(selectedRow, selectedColumn);
-            updateScreen();
-            if (game.gameOver() != 0) {
+        if (this.game.gameOver() == 0) {
+            this.game.playRound(selectedRow, selectedColumn);
+            this.updateBoard();
+            if (this.game.gameOver() != 0) {
                 boardDiv.removeEventListener("click", clickHandler);
                 // Add messages and check for tie, move this to new 'end' function
             }
@@ -52,7 +52,7 @@ class TictactoePage {
     }
 
     start() {
-        boardDiv.addEventListener("click", clickHandler);
+        boardDiv.addEventListener("click", clickHandler.bind(this));
     }
 
     render() {
@@ -81,6 +81,7 @@ class TictactoePage {
         tictactoe.appendChild(button_holder);
 
         this.container.appendChild(tictactoe);
+        this.start();
     }
 
 }
