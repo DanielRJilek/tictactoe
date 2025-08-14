@@ -295,6 +295,8 @@ h1 {
 .curtain.loading {
     background-color: black;
     z-index: 100;
+    min-height: 100vh;
+    min-width: 100vw;
     transform: translateX(0%);
     transition: ease-in-out 0.5s;
 }

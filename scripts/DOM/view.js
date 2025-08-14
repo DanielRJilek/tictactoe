@@ -14,7 +14,7 @@ class View {
         this.page = null;
     }
 
-    clearPage() {
+    async clearPage() {
         let curtain = document.querySelector(".curtain");
         curtain.classList.add("loading");
         setTimeout(() => {
@@ -26,59 +26,59 @@ class View {
     }
 
     // refactor into one 'render' method 
-    renderTitlePage() {
-        this.clearPage();
+    async renderTitlePage() {
+        await this.clearPage();
         const titlePage = new TitlePage(this, this.container);
         titlePage.render();
     }
 
-    renderGameList() {
-        this.clearPage();
+    async renderGameList() {
+        await this.clearPage();
         const gameList = new GameList(this, this.container);
         gameList.render();
     }
 
-    renderAboutPage() {
-        this.clearPage();
+    async renderAboutPage() {
+        await this.clearPage();
         const aboutPage = new AboutPage(this, this.container);
         aboutPage.render();
         return 1;
     }
 
-    renderTictactoe() {
+    async renderTictactoe() {
         let fanfare = new Audio('./assets/audio/medieval-fanfare.mp3')
         fanfare.play();
-        this.clearPage();
+        await this.clearPage();
         const tictactoe = new TictactoePage(this, this.container);
         tictactoe.render();
     }
 
-    renderNineMorris() {
+    async renderNineMorris() {
         let fanfare = new Audio('./assets/audio/medieval-fanfare.mp3')
         fanfare.play();
-        this.clearPage();
+        await this.clearPage();
         const nineMorris = new NineMorris(this, this.container);
         nineMorris.render();
     }
 
-    renderAlquerque() {
+    async renderAlquerque() {
         let fanfare = new Audio('./assets/audio/medieval-fanfare.mp3')
         fanfare.play();
-        this.clearPage();
+        await this.clearPage();
         const alquerque = new Alquerque(this, this.container);
         alquerque.render();
     }
 
-    renderDoblet() {
+    async renderDoblet() {
         let fanfare = new Audio('./assets/audio/medieval-fanfare.mp3')
         fanfare.play();
-        this.clearPage();
+        await this.clearPage();
         const doblet = new Doblet(this, this.container);
         doblet.render();
     }
 
-    renderMusicPage() {
-        this.clearPage();
+    async renderMusicPage() {
+        await this.clearPage();
         const musicPage = new MusicPage(this, this.container);
         musicPage.render();
         return 1;
