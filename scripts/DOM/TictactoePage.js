@@ -61,12 +61,11 @@ class TictactoePage {
 
     render() {
         const tictactoe = document.createElement("div");
-        tictactoe.classList.add("game-page", "loading");
+        tictactoe.classList.add("game-page", "slow-fade");
         tictactoe.setAttribute("id", "tictactoe-page");
 
         const holder = document.createElement("div");
         holder.classList.add("board-holder");
-        holder.classList.add("loading");
         this.board = this.createBoard(holder);
         tictactoe.appendChild(holder);
 
@@ -86,12 +85,7 @@ class TictactoePage {
         tictactoe.appendChild(button_holder);
 
         this.container.appendChild(tictactoe);
-        setTimeout(() => {
-            holder.classList.remove("loading");
-            tictactoe.classList.remove("loading");
-            this.start();
-        }, 3000);
-        
+        this.start();
     }
 
 }

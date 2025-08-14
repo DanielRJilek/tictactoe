@@ -15,9 +15,14 @@ class View {
     }
 
     clearPage() {
-        while (this.container.firstChild) {
+        let curtain = document.querySelector(".curtain");
+        curtain.classList.add("loading");
+        setTimeout(() => {
+            while (this.container.firstChild) {
             this.container.lastChild.remove();
-        }
+            }
+        }, 250);
+        curtain.classList.remove("loading");
     }
 
     // refactor into one 'render' method 
