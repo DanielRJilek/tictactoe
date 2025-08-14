@@ -2,6 +2,10 @@ class Tictactoe {
     constructor() {
         // this.player1 = new Player();
         // this.player2 = new Player();
+        this.finished = 0;
+        this.turn = 1;
+        this.winner = null;
+        this.currentPlayer = 1;
         this.board = new Array(3);
         for (let i = 0; i < 3; i++) {
             this.board[i] = new Array(3);
@@ -9,8 +13,8 @@ class Tictactoe {
     }
 
     move(x, y, player) {
-        if (board[x][y] == null) {
-            board[x][y] = player.symbol;
+        if (this.board[x][y] == null) {
+            this.board[x][y] = player.symbol;
             return true;
         }
         else {
@@ -18,9 +22,13 @@ class Tictactoe {
         }
     }
 
+    getBoard() {
+        return this.board;
+    }
+
     rowWin() {
         for (let i = 0; i < 3; i++) {
-            if (getBoard()[x][i] != getBoard()[x][y]) {
+            if (this.getBoard()[x][i] != this.getBoard()[x][y]) {
                 return false;
             }
         }
@@ -29,7 +37,7 @@ class Tictactoe {
 
     columnWin() {
         for (let i = 0; i < 3; i++) {
-            if (getBoard()[i][y] != getBoard()[x][y]) {
+            if (this.getBoard()[i][y] != this.getBoard()[x][y]) {
                 return false;
             }
         }
@@ -41,25 +49,49 @@ class Tictactoe {
     }
 
     gameOver() {
-        if (turn < 5) {
+        if (this.turn < 5) {
             return false;
         }
-        else if (turn === 9) {
-            if (rowWin(x,y) || columnWin(x,y) || diagonalWin(x,y)) {
+        else if (this.turn === 9) {
+            if (this.rowWin(x,y) || this.columnWin(x,y) || this.diagonalWin(x,y)) {
                 return true;
             }
             else {
                 return null;
             }
         }
-        if (rowWin(x,y) || columnWin(x,y) || diagonalWin(x,y)) {
+        if (this.rowWin(x,y) || this.columnWin(x,y) || this.diagonalWin(x,y)) {
             return true;
         }
         return false;
     }
 
-    playRound() {
+    getCurrentPlayer() {
+        return this.currentPlayer;
+    }
 
+    switchCurrentPlayer() {
+        this.currentPlayer = this.currentPlayer === 1 ? 2 : 1;
+    }
+
+    playRound() {
+        if (this.move(x,y,this.getCurrentPlayer())) {
+            this.finished = this.gameOver(x,y);
+            // game won
+            if (this.finished == 1) {
+                this.winner = this.currentPlayer;
+                return;
+            }
+            // game not over
+            else if (thisfinished == 0) {
+                this.switchCurrentPlayer();
+                this.turn++;
+                return;
+            }
+            //tie game
+            this.finished = 1;
+            return;
+        }
     }
 }
 
