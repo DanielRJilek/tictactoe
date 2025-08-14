@@ -292,11 +292,15 @@ h1 {
     transform: translateY(-200%);
 } */
 
-.curtain.loading {
+.curtain {
     background-color: black;
     z-index: 100;
     min-height: 100vh;
     min-width: 100vw;
+}
+
+.curtain.loading {
+    
     transform: translateX(0%);
     transition: ease-in-out 0.5s;
 }
