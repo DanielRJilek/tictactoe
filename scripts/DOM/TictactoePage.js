@@ -44,7 +44,7 @@ class TictactoePage {
         if (this.game.gameOver() == 0) {
             this.game.playRound(selectedRow, selectedColumn);
             this.updateBoard();
-            if (this.game.gameOver() != 0) {
+            if (this.game.gameOver(selectedRow,selectedColumn) != 0) {
                 this.board.removeEventListener("click", clickHandler);
                 // Add messages and check for tie, move this to new 'end' function
             }
