@@ -15,8 +15,8 @@ class TictactoePage {
                 square.dataset.row = i;
                 square.dataset.column = j;
                 square.classList.add("tictactoe-square");
-                square.classList.add("row"+i.toString);
-                square.classList.add("column"+j.toString);
+                square.classList.add("row"+i.toString());
+                square.classList.add("column"+j.toString());
                 board.appendChild(square);
             }
         }
