@@ -300,6 +300,10 @@ h1 {
     min-width: 100vw;
 }
 
+.container {
+    position: absolute;
+}
+
 .curtain.loading {
     
     transform: translateX(0%);
