@@ -231,6 +231,7 @@ h1 {
     justify-self: center;
     align-self: center;
     overflow: visible;
+    margin: auto;
 }
 
 #tictactoe-board {
