@@ -172,7 +172,7 @@ h1 {
     place-items: center;
 }
 
-.button-holder {
+.slideshow .button-holder {
     grid-column: 1;
     grid-row: 1;
     display: flex;
@@ -236,11 +236,11 @@ h1 {
     background-color: rgb(249, 201, 166);
 }
 
-.row1 {
+.row0 {
     border-bottom: 2px solid black;
 }
 
-.row2 {
+.row1 {
     border-bottom: 2px solid black;
 }
 
@@ -250,4 +250,10 @@ h1 {
 
 .column1 {
     border-right: 2px solid black;
+}
+
+.game-page .button-holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

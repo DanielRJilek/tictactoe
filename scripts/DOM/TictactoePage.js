@@ -60,22 +60,25 @@ class TictactoePage {
         tictactoe.classList.add("game-page", "slow-fade");
         tictactoe.setAttribute("id", "tictactoe-page");
 
-        const back = document.createElement("button");
-        back.textContent = "Back";
-        back.setAttribute("id", "back-button");
-        back.addEventListener("click", this.view.renderGameList.bind(this.view));
-        tictactoe.appendChild(back);
-
-        const help = document.createElement("button");
-        help.textContent = "Help";
-        help.setAttribute("id", "help-button");
-        // help.addEventListener("click", this.view.renderGameList.bind(this.view));
-        tictactoe.appendChild(help);
         const holder = document.createElement("div");
         holder.classList.add("board-holder");
         this.board = this.createBoard(holder);
         tictactoe.appendChild(holder);
 
+        const button_holder = document.createElement("div");
+        button_holder.classList.add("button-holder");
+        const back = document.createElement("button");
+        back.textContent = "Back";
+        back.setAttribute("id", "back-button");
+        back.addEventListener("click", this.view.renderGameList.bind(this.view));
+        button_holder.appendChild(back);
+
+        const help = document.createElement("button");
+        help.textContent = "Help";
+        help.setAttribute("id", "help-button");
+        // help.addEventListener("click", this.view.renderGameList.bind(this.view));
+        button_holder.appendChild(help);
+        tictactoe.appendChild(button_holder);
 
         this.container.appendChild(tictactoe);
     }
