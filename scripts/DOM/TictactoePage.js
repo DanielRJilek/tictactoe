@@ -61,7 +61,7 @@ class TictactoePage {
 
     render() {
         const tictactoe = document.createElement("div");
-        tictactoe.classList.add("game-page", "slow-fade");
+        tictactoe.classList.add("game-page", "loading");
         tictactoe.setAttribute("id", "tictactoe-page");
 
         const holder = document.createElement("div");
@@ -88,6 +88,7 @@ class TictactoePage {
         this.container.appendChild(tictactoe);
         setTimeout(() => {
             holder.classList.remove("loading");
+            tictactoe.classList.remove("loading");
             this.start();
         }, 3000);
         
