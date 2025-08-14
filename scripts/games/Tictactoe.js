@@ -26,7 +26,7 @@ class Tictactoe {
         return this.board;
     }
 
-    rowWin() {
+    rowWin(x,y) {
         for (let i = 0; i < 3; i++) {
             if (this.getBoard()[x][i] != this.getBoard()[x][y]) {
                 return false;
@@ -35,7 +35,7 @@ class Tictactoe {
         return true;
     }
 
-    columnWin() {
+    columnWin(x,y) {
         for (let i = 0; i < 3; i++) {
             if (this.getBoard()[i][y] != this.getBoard()[x][y]) {
                 return false;
@@ -44,11 +44,11 @@ class Tictactoe {
         return true;
     }
 
-    diagonalWin() {
+    diagonalWin(x,y) {
         return false;
     }
 
-    gameOver() {
+    gameOver(x,y) {
         if (this.turn < 5) {
             return false;
         }
@@ -74,7 +74,7 @@ class Tictactoe {
         this.currentPlayer = this.currentPlayer === 1 ? 2 : 1;
     }
 
-    playRound() {
+    playRound(x,y) {
         if (this.move(x,y,this.getCurrentPlayer())) {
             this.finished = this.gameOver(x,y);
             // game won
