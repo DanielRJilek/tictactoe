@@ -218,7 +218,7 @@ h1 {
 }
 
 /* Tictactoe */
-#game-page {
+.game-page {
     display: flex;
     flex-direction: column;
 }
@@ -240,6 +240,7 @@ h1 {
     font-size: 3vh;
     border: 4px solid rgb(177, 86, 21);
     background-color: rgb(249, 201, 166);
+    margin: auto;
 }
 
 .row0 {
@@ -262,5 +263,6 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 500px;
+    justify-self: center;
+    width: 700px;
 }
