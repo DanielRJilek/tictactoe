@@ -219,19 +219,20 @@ h1 {
 
 /* Tictactoe */
 .game-page {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
     min-height: 100vh;
 }
 
 .board-holder {
     display: flex;
-    justify-content: center;
+    /* justify-content: center;
     align-items: center;
     justify-self: center;
-    align-self: center;
+    align-self: center; */
     overflow: visible;
     margin: auto;
+    grid-row: 2 / 3;
 }
 
 #tictactoe-board {
@@ -269,4 +270,5 @@ h1 {
     justify-content: space-between;
     align-self: center;
     width: 700px;
+    grid-row: 3;
 }
