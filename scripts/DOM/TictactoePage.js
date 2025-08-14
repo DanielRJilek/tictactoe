@@ -52,7 +52,7 @@ class TictactoePage {
     }
 
     start() {
-        this.board.addEventListener("click", clickHandler.bind(this));
+        this.board.addEventListener("click", this.clickHandler.bind(this));
     }
 
     render() {

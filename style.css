@@ -267,6 +267,7 @@ h1 {
 .game-page .button-holder {
     display: flex;
     align-items: center;
+    justify-self: center;
     justify-content: space-between;
     align-self: center;
     width: 700px;
