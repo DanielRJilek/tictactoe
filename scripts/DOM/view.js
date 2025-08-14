@@ -15,14 +15,17 @@ class View {
     }
 
     async clearPage() {
-        let curtain = document.querySelector(".curtain");
-        curtain.classList.add("loading");
-        setTimeout(() => {
-            while (this.container.firstChild) {
-            this.container.lastChild.remove();
-            }
-        }, 250);
-        curtain.classList.remove("loading");
+        return new Promise((resolve,reject) => {
+            let curtain = document.querySelector(".curtain");
+            curtain.classList.add("loading");
+            setTimeout(() => {
+                while (this.container.firstChild) {
+                this.container.lastChild.remove();
+                }
+            }, 250);
+            curtain.classList.remove("loading");
+        });
+        
     }
 
     // refactor into one 'render' method 
