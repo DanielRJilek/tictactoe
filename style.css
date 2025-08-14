@@ -232,6 +232,8 @@ h1 {
     width: 50vh;
     margin: auto;
     font-size: 3vh;
+    border: 4px solid rgb(177, 86, 21);
+    background-color: rgb(249, 201, 166);
 }
 
 .row1 {
@@ -242,10 +244,10 @@ h1 {
     border-bottom: 2px solid black;
 }
 
-.column1 {
+.column0 {
     border-right: 2px solid black;
 }
 
-.column2 {
+.column1 {
     border-right: 2px solid black;
 }
