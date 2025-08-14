@@ -21,6 +21,7 @@ class View {
             setTimeout(() => {
                 while (this.container.firstChild) {
                 this.container.lastChild.remove();
+                resolve();
                 }
             }, 250);
             curtain.classList.remove("loading");
