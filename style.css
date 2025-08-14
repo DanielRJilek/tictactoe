@@ -233,6 +233,7 @@ h1 {
     overflow: visible;
     margin: auto;
     grid-row: 2 / 3;
+    transition-duration: 500ms;
 }
 
 #tictactoe-board {
@@ -272,4 +273,10 @@ h1 {
     align-self: center;
     width: 700px;
     grid-row: 3;
+    
+}
+
+.board-holder.loading {
+    transform: translateY(100%);
+    overflow-y: hidden;
 }

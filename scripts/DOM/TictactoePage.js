@@ -66,6 +66,7 @@ class TictactoePage {
 
         const holder = document.createElement("div");
         holder.classList.add("board-holder");
+        holder.classList.add("loading");
         this.board = this.createBoard(holder);
         tictactoe.appendChild(holder);
 
@@ -85,7 +86,11 @@ class TictactoePage {
         tictactoe.appendChild(button_holder);
 
         this.container.appendChild(tictactoe);
-        this.start();
+        setTimeout(() => {
+            holder.classList.remove("loading");
+            this.start();
+        }, 3000);
+        
     }
 
 }
