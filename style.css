@@ -302,6 +302,7 @@ h1 {
 
 .container {
     position: absolute;
+    inset: 0;
 }
 
 .curtain.loading {
