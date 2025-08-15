@@ -31,16 +31,16 @@ class TictactoePage {
         return board;
     }
 
-    getBoard() {
-        return this.game.getBoard();
+    getMark(x,y) {
+        return this.game.getBoard()[x][y];
     }
 
     updateBoard() {
         let board = document.querySelector(".board");
         let squares = board.children;
-        for (let i = 0;i < 9;i++) {
-            console.log(this.game.getBoard()[i%3][i/3]);
-            squares[i].textContent = this.game.getBoard()[i%3][i/3];
+        for (let i = 0; i < 9; i++) {
+            console.log(this.game.getMark(i%3, i/3));
+            squares[i].textContent = this.game.getMark(i%3, i/3);
         }
     }
 
