@@ -50,8 +50,6 @@ class View {
             titlePage.render();
         }, 500);
         
-        
-        
     }
 
     renderGameList() {
@@ -67,8 +65,6 @@ class View {
             const gameList = new GameList(this, this.container);
             gameList.render();
         }, 500);
-        
-        
     }
 
     renderAboutPage() {
@@ -83,7 +79,6 @@ class View {
             const aboutPage = new AboutPage(this, this.container);
             aboutPage.render();
         }, 500);
-        
         
         return 1;
     }
@@ -134,8 +129,6 @@ class View {
             const alquerque = new Alquerque(this, this.container);
             alquerque.render();
         }, 500);
-        
-        
     }
 
     renderDoblet() {
@@ -158,14 +151,14 @@ class View {
         let curtain = document.querySelector(".curtain");
         curtain.classList.add("loading");
         setTimeout(() => {
+            curtain.classList.remove("loading");
+        }, 600);
+
+        setTimeout(() => {
             this.clearPage();
             const musicPage = new MusicPage(this, this.container);
             musicPage.render();
         }, 500);
-        
-        setTimeout(() => {
-            curtain.classList.remove("loading");
-        }, 600);
         return 1;
     }
 
