@@ -34,7 +34,7 @@ class TictactoePage {
     updateBoard() {
         let board = document.querySelector(".board");
         let squares = board.children;
-        for (i=0;i<9;i++) {
+        for (let i = 0;i < 9;i++) {
             squares[i].textContent = this.getBoard()[i%3][i/3];
         }
     }
