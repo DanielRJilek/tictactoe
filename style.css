@@ -292,14 +292,6 @@ h1 {
     transform: translateY(-200%);
 } */
 
-.curtain {
-    position: relative;
-    background-color: black;
-    z-index: 100;
-    min-height: 100vh;
-    min-width: 100vw;
-}
-
 .container {
     position: absolute;
     inset: 0;
@@ -317,7 +309,16 @@ h1 {
     }
 }
 
-.curtain.loading {
+.curtain {
+    position: relative;
+    background-color: black;
+    z-index: 100;
+    
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.curtain.notloading {
     animation-name: slideInOut;
     animation-duration: 0.5s;
 }

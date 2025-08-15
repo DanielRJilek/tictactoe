@@ -17,14 +17,14 @@ class View {
     async clearPage() {
         return new Promise((resolve,reject) => {
             let curtain = document.querySelector(".curtain");
-            curtain.classList.add("loading");
+            curtain.classList.remove("notloading");
             setTimeout(() => {
                 while (this.container.firstChild) {
                 this.container.lastChild.remove();
                 resolve();
                 }
             }, 250);
-            curtain.classList.remove("loading");
+            curtain.classList.add("loading");
         });
         
     }
