@@ -310,10 +310,10 @@ h1 {
 }
 
 .curtain {
-    position: relative;
+    position: sticky;
     background-color: black;
     z-index: 100;
-    
+    left: -100vw;
     min-height: 100vh;
     min-width: 100vw;
 }
