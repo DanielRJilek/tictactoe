@@ -16,7 +16,7 @@ class Tictactoe {
     }
 
     move(x, y, player) {
-        if (this.board[x][y] == null) {
+        if (this.board[x][y] == '') {
             this.board[x][y] = player === 1 ? 'O' : 'X';
             return true;
         }
