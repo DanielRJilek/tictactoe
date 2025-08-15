@@ -61,7 +61,7 @@ class TictactoePage {
 
     render() {
         const tictactoe = document.createElement("div");
-        tictactoe.classList.add("game-page", "slow-fade");
+        tictactoe.classList.add("game-page");
         tictactoe.setAttribute("id", "tictactoe-page");
 
         const holder = document.createElement("div");
