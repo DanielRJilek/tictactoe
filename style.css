@@ -313,7 +313,7 @@ h1 {
     position: sticky;
     background-color: black;
     z-index: 100;
-    left: -100vw;
+    left: 100vw;
     min-height: 100vh;
     min-width: 100vw;
 }
