@@ -20,11 +20,11 @@ class View {
             curtain.classList.remove("notloading");
             setTimeout(() => {
                 while (this.container.firstChild) {
-                this.container.lastChild.remove();
-                resolve();
+                    this.container.lastChild.remove();
+                    resolve();
                 }
             }, 250);
-            curtain.classList.add("loading");
+            curtain.classList.add("notloading");
         });
         
     }
