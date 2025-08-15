@@ -75,14 +75,16 @@ class View {
         let curtain = document.querySelector(".curtain");
         curtain.classList.add("loading");
         setTimeout(() => {
+            curtain.classList.remove("loading");
+        }, 600);
+
+        setTimeout(() => {
             this.clearPage();
             const aboutPage = new AboutPage(this, this.container);
             aboutPage.render();
         }, 500);
         
-        setTimeout(() => {
-            curtain.classList.remove("loading");
-        }, 600);
+        
         return 1;
     }
 
@@ -91,12 +93,15 @@ class View {
         fanfare.play();
         let curtain = document.querySelector(".curtain");
         curtain.classList.add("loading");
-        this.clearPage();
-        const tictactoe = new TictactoePage(this, this.container);
-        tictactoe.render();
         setTimeout(() => {
             curtain.classList.remove("loading");
         }, 600);
+
+        setTimeout(() => {
+            this.clearPage();
+            const tictactoe = new TictactoePage(this, this.container);
+            tictactoe.render();
+        }, 500);
     }
 
     renderNineMorris() {
@@ -104,12 +109,15 @@ class View {
         fanfare.play();
         let curtain = document.querySelector(".curtain");
         curtain.classList.add("loading");
-        this.clearPage();
-        const nineMorris = new NineMorris(this, this.container);
-        nineMorris.render();
         setTimeout(() => {
             curtain.classList.remove("loading");
         }, 600);
+
+        setTimeout(() => {
+            this.clearPage();
+            const nineMorris = new NineMorris(this, this.container);
+            nineMorris.render();
+        }, 500);
     }
 
     renderAlquerque() {
@@ -117,12 +125,17 @@ class View {
         fanfare.play();
         let curtain = document.querySelector(".curtain");
         curtain.classList.add("loading");
-        this.clearPage();
-        const alquerque = new Alquerque(this, this.container);
-        alquerque.render();
         setTimeout(() => {
             curtain.classList.remove("loading");
         }, 600);
+
+        setTimeout(() => {
+            this.clearPage();
+            const alquerque = new Alquerque(this, this.container);
+            alquerque.render();
+        }, 500);
+        
+        
     }
 
     renderDoblet() {
@@ -130,12 +143,15 @@ class View {
         fanfare.play();
         let curtain = document.querySelector(".curtain");
         curtain.classList.add("loading");
-        this.clearPage();
-        const doblet = new Doblet(this, this.container);
-        doblet.render();
         setTimeout(() => {
             curtain.classList.remove("loading");
         }, 600);
+
+        setTimeout(() => {
+            this.clearPage();
+            const doblet = new Doblet(this, this.container);
+            doblet.render();
+        }, 500);
     }
 
     renderMusicPage() {
