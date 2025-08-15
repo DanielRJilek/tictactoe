@@ -39,7 +39,7 @@ class TictactoePage {
         let board = document.querySelector(".board");
         let squares = board.children;
         for (let i = 0;i < 9;i++) {
-            squares[i].textContent = this.getBoard()[i%3][i/3];
+            squares[i].textContent = this.getBoard()[i/3][i%3];
         }
     }
 
