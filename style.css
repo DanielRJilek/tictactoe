@@ -45,7 +45,7 @@ body {
     min-width: 100vw;
     font-family: tangerine-bold;
     box-sizing: border-box;
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 #list-page {
@@ -308,6 +308,8 @@ h1 {
         transform: translateX(0%);
     }
 }
+
+/* MAKE LEFT AND RIGHT CURTAIN */
 
 .curtain {
     position: absolute;
