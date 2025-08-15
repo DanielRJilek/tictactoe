@@ -41,6 +41,7 @@ class View {
         curtain.classList.add("loading");
         setTimeout(() => {
             curtain.classList.remove("loading");
+            curtain.classList.add("notloading");
         }, 600);
 
         setTimeout(() => {
@@ -58,8 +59,9 @@ class View {
         curtain.classList.add("loading");
         setTimeout(() => {
             curtain.classList.remove("loading");
+            curtain.classList.add("notloading");
         }, 600);
-        
+
         setTimeout(() => {
             this.clearPage();
             const gameList = new GameList(this, this.container);
