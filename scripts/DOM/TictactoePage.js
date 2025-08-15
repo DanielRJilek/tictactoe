@@ -31,6 +31,10 @@ class TictactoePage {
         return board;
     }
 
+    getBoard() {
+        return this.board;
+    }
+
     updateBoard() {
         let board = document.querySelector(".board");
         let squares = board.children;
