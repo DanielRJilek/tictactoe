@@ -313,12 +313,14 @@ h1 {
     position: absolute;
     background-color: black;
     z-index: 100;
-    left: -100%;
+    
     min-height: 100vh;
     min-width: 100vw;
+    animation-name: slideInOut;
+    animation-duration: 0.5s;
 }
 
 .curtain.notloading {
-    animation-name: slideInOut;
-    animation-duration: 0.5s;
+    
+    left: -100%;
 }
