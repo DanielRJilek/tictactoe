@@ -5,7 +5,7 @@ class TictactoePage {
         this.view = view;
         this.container = container;
         this.game = new Tictactoe;
-        this.game.getBoard();
+        this.board;
     }
 
     createSquares(board) {
@@ -32,7 +32,7 @@ class TictactoePage {
     }
 
     getBoard() {
-        return this.board;
+        return this.game.getBoard();
     }
 
     updateBoard() {
