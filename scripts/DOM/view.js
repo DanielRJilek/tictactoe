@@ -39,35 +39,44 @@ class View {
     renderTitlePage() {
         let curtain = document.querySelector(".curtain");
         curtain.classList.add("loading");
-        this.clearPage();
-        const titlePage = new TitlePage(this, this.container);
-        titlePage.render();
+        setTimeout(() => {
+            this.clearPage();
+            const titlePage = new TitlePage(this, this.container);
+            titlePage.render();
+        }, 500);
+        
         setTimeout(() => {
             curtain.classList.remove("loading");
-        }, 500);
+        }, 600);
         
     }
 
     renderGameList() {
         let curtain = document.querySelector(".curtain");
         curtain.classList.add("loading");
-        this.clearPage();
-        const gameList = new GameList(this, this.container);
-        gameList.render();
+        setTimeout(() => {
+            this.clearPage();
+            const gameList = new GameList(this, this.container);
+            gameList.render();
+        }, 500);
+        
         setTimeout(() => {
             curtain.classList.remove("loading");
-        }, 500);
+        }, 600);
     }
 
     renderAboutPage() {
         let curtain = document.querySelector(".curtain");
         curtain.classList.add("loading");
-        this.clearPage();
-        const aboutPage = new AboutPage(this, this.container);
-        aboutPage.render();
+        setTimeout(() => {
+            this.clearPage();
+            const aboutPage = new AboutPage(this, this.container);
+            aboutPage.render();
+        }, 500);
+        
         setTimeout(() => {
             curtain.classList.remove("loading");
-        }, 500);
+        }, 600);
         return 1;
     }
 
@@ -81,7 +90,7 @@ class View {
         tictactoe.render();
         setTimeout(() => {
             curtain.classList.remove("loading");
-        }, 500);
+        }, 600);
     }
 
     renderNineMorris() {
@@ -94,7 +103,7 @@ class View {
         nineMorris.render();
         setTimeout(() => {
             curtain.classList.remove("loading");
-        }, 500);
+        }, 600);
     }
 
     renderAlquerque() {
@@ -107,7 +116,7 @@ class View {
         alquerque.render();
         setTimeout(() => {
             curtain.classList.remove("loading");
-        }, 500);
+        }, 600);
     }
 
     renderDoblet() {
@@ -120,18 +129,21 @@ class View {
         doblet.render();
         setTimeout(() => {
             curtain.classList.remove("loading");
-        }, 500);
+        }, 600);
     }
 
     renderMusicPage() {
         let curtain = document.querySelector(".curtain");
         curtain.classList.add("loading");
-        this.clearPage();
-        const musicPage = new MusicPage(this, this.container);
-        musicPage.render();
+        setTimeout(() => {
+            this.clearPage();
+            const musicPage = new MusicPage(this, this.container);
+            musicPage.render();
+        }, 500);
+        
         setTimeout(() => {
             curtain.classList.remove("loading");
-        }, 500);
+        }, 600);
         return 1;
     }
 
