@@ -348,3 +348,9 @@ h1 {
 /* .curtain.notloading {
     left: -100%;
 } */
+
+.tictactoe-square {
+    font-size: 48px;
+    text-align: center;
+    line-height: 200px;
+}
