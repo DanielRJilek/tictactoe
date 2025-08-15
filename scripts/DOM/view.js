@@ -42,7 +42,10 @@ class View {
         this.clearPage();
         const titlePage = new TitlePage(this, this.container);
         titlePage.render();
-        curtain.classList.remove("loading");
+        setTimeout(() => {
+            curtain.classList.remove("loading");
+        }, 500);
+        
     }
 
     renderGameList() {
@@ -51,7 +54,9 @@ class View {
         this.clearPage();
         const gameList = new GameList(this, this.container);
         gameList.render();
-        curtain.classList.remove("loading");
+        setTimeout(() => {
+            curtain.classList.remove("loading");
+        }, 500);
     }
 
     renderAboutPage() {
@@ -60,7 +65,9 @@ class View {
         this.clearPage();
         const aboutPage = new AboutPage(this, this.container);
         aboutPage.render();
-        curtain.classList.remove("loading");
+        setTimeout(() => {
+            curtain.classList.remove("loading");
+        }, 500);
         return 1;
     }
 
@@ -72,7 +79,9 @@ class View {
         this.clearPage();
         const tictactoe = new TictactoePage(this, this.container);
         tictactoe.render();
-        curtain.classList.remove("loading");
+        setTimeout(() => {
+            curtain.classList.remove("loading");
+        }, 500);
     }
 
     renderNineMorris() {
@@ -83,7 +92,9 @@ class View {
         this.clearPage();
         const nineMorris = new NineMorris(this, this.container);
         nineMorris.render();
-        curtain.classList.remove("loading");
+        setTimeout(() => {
+            curtain.classList.remove("loading");
+        }, 500);
     }
 
     renderAlquerque() {
@@ -94,7 +105,9 @@ class View {
         this.clearPage();
         const alquerque = new Alquerque(this, this.container);
         alquerque.render();
-        curtain.classList.remove("loading");
+        setTimeout(() => {
+            curtain.classList.remove("loading");
+        }, 500);
     }
 
     renderDoblet() {
@@ -105,7 +118,9 @@ class View {
         this.clearPage();
         const doblet = new Doblet(this, this.container);
         doblet.render();
-        curtain.classList.remove("loading");
+        setTimeout(() => {
+            curtain.classList.remove("loading");
+        }, 500);
     }
 
     renderMusicPage() {
@@ -114,7 +129,9 @@ class View {
         this.clearPage();
         const musicPage = new MusicPage(this, this.container);
         musicPage.render();
-        curtain.classList.remove("loading");
+        setTimeout(() => {
+            curtain.classList.remove("loading");
+        }, 500);
         return 1;
     }
 
