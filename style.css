@@ -310,7 +310,7 @@ h1 {
 }
 
 .curtain {
-    position: relative;
+    position: absolute;
     background-color: black;
     z-index: 100;
     right: 0;
