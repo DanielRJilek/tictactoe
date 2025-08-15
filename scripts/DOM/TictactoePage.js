@@ -49,7 +49,7 @@ class TictactoePage {
         if(!selectedColumn || !selectedRow) {
             return;
         }
-        if (this.game.gameOver() == 0) {
+        if (this.game.gameOver(selectedRow, selectedColumn) == 0) {
             this.game.playRound(selectedRow, selectedColumn);
             this.updateBoard();
             if (this.game.gameOver(selectedRow,selectedColumn) != 0) {
