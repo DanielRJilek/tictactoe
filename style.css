@@ -317,7 +317,7 @@ h1 {
     min-height: 100vh;
     min-width: 100vw;
     animation-name: slideInOut;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
 }
 
 .curtain.notloading {
