@@ -331,6 +331,9 @@ h1 {
 .curtain.loading {
     left: 0%;
     visibility: visible;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    transition-property: left;
 }
 
 /* .curtain.notloading {
