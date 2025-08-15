@@ -40,14 +40,16 @@ class View {
         let curtain = document.querySelector(".curtain");
         curtain.classList.add("loading");
         setTimeout(() => {
+            curtain.classList.remove("loading");
+        }, 600);
+
+        setTimeout(() => {
             this.clearPage();
             const titlePage = new TitlePage(this, this.container);
             titlePage.render();
         }, 500);
         
-        setTimeout(() => {
-            curtain.classList.remove("loading");
-        }, 600);
+        
         
     }
 
@@ -55,14 +57,16 @@ class View {
         let curtain = document.querySelector(".curtain");
         curtain.classList.add("loading");
         setTimeout(() => {
+            curtain.classList.remove("loading");
+        }, 600);
+        
+        setTimeout(() => {
             this.clearPage();
             const gameList = new GameList(this, this.container);
             gameList.render();
         }, 500);
         
-        setTimeout(() => {
-            curtain.classList.remove("loading");
-        }, 600);
+        
     }
 
     renderAboutPage() {
