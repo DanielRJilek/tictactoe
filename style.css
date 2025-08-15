@@ -326,7 +326,7 @@ h1 {
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
     transition-property: left;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 .curtain.loading {
@@ -337,13 +337,13 @@ h1 {
     transition-property: left;
 }
 
-.curtain.notloading {
+/* .curtain.notloading {
     left: -100%;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
     transition-property: left;
     visibility: hidden;
-}
+} */
 
 /* .curtain.notloading {
     left: -100%;
