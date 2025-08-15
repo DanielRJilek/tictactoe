@@ -313,7 +313,7 @@ h1 {
     position: absolute;
     background-color: black;
     z-index: 100;
-    right: 0;
+    left: -100%;
     min-height: 100vh;
     min-width: 100vw;
 }
