@@ -316,11 +316,19 @@ h1 {
     
     min-height: 100vh;
     min-width: 100vw;
-    animation-name: slideInOut;
-    animation-duration: 1s;
+    height: 100%;
+    /* animation-name: slideInOut;
+    animation-duration: 1s; */
+    left: -100%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    transition-property: left;
 }
 
-.curtain.notloading {
-    
-    left: -100%;
+.curtain.loading {
+    left: 0%;
 }
+
+/* .curtain.notloading {
+    left: -100%;
+} */
