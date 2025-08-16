@@ -10,13 +10,13 @@ class Tictactoe {
         for (let i = 0; i < 3; i++) {
             this.board[i] = new Array(3);
             for (let j = 0; j < 3; j++) {
-                this.board[i][j] = " ";
+                this.board[i][j] = nul;
             }
         }
     }
 
     move(x, y, player) {
-        if (this.board[x][y] == '') {
+        if (this.board[x][y] == null) {
             this.board[x][y] = player === 1 ? 'O' : 'X';
             return true;
         }
