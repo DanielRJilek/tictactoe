@@ -10,7 +10,7 @@ class Tictactoe {
         for (let i = 0; i < 3; i++) {
             this.board[i] = new Array(3);
             for (let j = 0; j < 3; j++) {
-                this.board[i][j] = "";
+                this.board[i][j] = " ";
             }
         }
     }
