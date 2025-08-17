@@ -39,8 +39,8 @@ class TictactoePage {
         let board = document.querySelector(".board");
         let squares = board.children;
         for (let i = 0; i < 9; i++) {
-            console.log(this.getMark(i%3, Math.floor(i/3)));
-            squares[i].textContent = this.getMark(i%3, Math.floor(i/3)) != null ? this.getMark(i%3, Math.floor(i/3)) : '';
+            console.log(this.getMark(Math.floor(i/3), i%3));
+            squares[i].textContent = this.getMark(Math.floor(i/3), i%3) != null ? this.getMark(Math.floor(i/3), i%3) : null;
         }
     }
 
