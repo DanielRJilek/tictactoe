@@ -57,13 +57,16 @@ class Tictactoe {
         }
         else if (this.turn === 9) {
             if (this.rowWin(x,y) || this.columnWin(x,y) || this.diagonalWin(x,y)) {
+                this.finished = 1;
                 return true;
             }
             else {
+                this.finished = 1;
                 return null;
             }
         }
         if (this.rowWin(x,y) || this.columnWin(x,y) || this.diagonalWin(x,y)) {
+            this.finished = 1;
             return true;
         }
         return false;
