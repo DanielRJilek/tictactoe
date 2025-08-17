@@ -39,7 +39,6 @@ class TictactoePage {
         let board = document.querySelector(".board");
         let squares = board.children;
         for (let i = 0; i < 9; i++) {
-            console.log(this.getMark(Math.floor(i/3), i%3));
             squares[i].textContent = this.getMark(Math.floor(i/3), i%3) != null ? this.getMark(Math.floor(i/3), i%3) : null;
         }
     }
@@ -55,6 +54,7 @@ class TictactoePage {
             this.updateBoard();
             if (this.game.finished != 0) {
                 this.board.removeEventListener("click", this.clickHandler);
+                // this.winSequence();
                 // Add messages and check for tie, move this to new 'end' function
             }
         }
