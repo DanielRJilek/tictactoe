@@ -231,19 +231,16 @@ h1 {
 .game-page {
     display: grid;
     grid-template-rows: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
     min-height: 100vh;
 }
 
 .board-holder {
     display: flex;
-    /* justify-content: center;
-    align-items: center;
-    justify-self: center;
-    align-self: center; */
     overflow: visible;
     margin: auto;
     grid-row: 2 / 3;
-    /* transition-duration: 500ms; */
+    grid-column: 1;
 }
 
 #tictactoe-board {
@@ -283,15 +280,18 @@ h1 {
     align-self: center;
     width: 700px;
     grid-row: 3;
+    grid-column: 1;
 }
 
-/* .game-page.loading {
-    overflow-y: hidden;
+.game-page .popup {
+    grid-row: 3;
+    grid-column: 2;
+    visibility: hidden;
 }
 
-.board-holder.loading {
-    transform: translateY(-200%);
-} */
+.popup.active {
+    visibility: visible;
+}
 
 .container {
     position: absolute;
@@ -320,8 +320,6 @@ h1 {
     min-height: 100vh;
     min-width: 100vw;
     height: 100%;
-    /* animation-name: slideInOut;
-    animation-duration: 1s; */
     left: -100%;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
@@ -336,18 +334,6 @@ h1 {
     transition-timing-function: ease-out;
     transition-property: left;
 }
-
-/* .curtain.notloading {
-    left: -100%;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
-    transition-property: left;
-    visibility: hidden;
-} */
-
-/* .curtain.notloading {
-    left: -100%;
-} */
 
 .tictactoe-square {
     font-size: 48px;

@@ -60,6 +60,16 @@ class TictactoePage {
         }
     }
 
+    showHelp() {
+        let popup = document.querySelector(".popup");
+        popup.classList.add("active");
+    }
+
+    hideHelp() {
+        let popup = document.querySelector(".popup");
+        popup.classList.remove("active");
+    }
+
     start() {
         this.board.addEventListener("click", this.clickHandler.bind(this));
     }
@@ -85,7 +95,7 @@ class TictactoePage {
         const help = document.createElement("button");
         help.textContent = "Help";
         help.setAttribute("id", "help-button");
-        // help.addEventListener("click", this.view.renderGameList.bind(this.view));
+        help.addEventListener("click", this.showHelp.bind(this));
         button_holder.appendChild(help);
         tictactoe.appendChild(button_holder);
 
