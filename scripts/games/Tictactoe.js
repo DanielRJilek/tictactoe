@@ -81,12 +81,12 @@ class Tictactoe {
         if (this.move(x,y,this.getCurrentPlayer())) {
             // this.finished = this.gameOver(x,y);
             // game won
-            if (this.finished == 1) {
+            if (this.gameOver(x,y) == 1) {
                 this.winner = this.currentPlayer;
                 return;
             }
             // game not over
-            else if (this.finished == 0) {
+            else if (this.gameOver(x,y) == 0) {
                 this.switchCurrentPlayer();
                 this.turn++;
                 return;
