@@ -1,0 +1,1 @@
+Tic-tac-toe is a classic pen and paper game. Take turns placing X's and O's until one player has a row, column, diagonal, or no win is possible.

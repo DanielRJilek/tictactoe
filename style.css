@@ -286,6 +286,7 @@ h1 {
 .game-page .popup {
     grid-row: 3;
     grid-column: 3;
+    z-index: 1;
     visibility: hidden;
 }
 

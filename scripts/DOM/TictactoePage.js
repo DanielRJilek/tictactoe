@@ -74,7 +74,7 @@ class TictactoePage {
         this.board.addEventListener("click", this.clickHandler.bind(this));
     }
 
-    render() {
+    async render() {
         const tictactoe = document.createElement("div");
         tictactoe.classList.add("game-page");
         tictactoe.setAttribute("id", "tictactoe-page");
@@ -98,10 +98,23 @@ class TictactoePage {
         help.addEventListener("click", this.showHelp.bind(this));
         button_holder.appendChild(help);
         tictactoe.appendChild(button_holder);
+        
+        const popup = document.createElement("div");
+        popup.classList.add("popup");
+        popup.textContent = await this.getFileContent("./assets/tictactoe_help.txt");
+        tictactoe.appendChild(popup);
 
         this.container.appendChild(tictactoe);
         this.start();
     }
+
+    async getFileContent(file) {
+        let x = await fetch(file);
+        let y = await x.text();
+        return y;
+    }
+
+    // Move content loading to a static class??
 
 }
 
