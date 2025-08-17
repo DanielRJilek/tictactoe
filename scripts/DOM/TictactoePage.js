@@ -40,7 +40,7 @@ class TictactoePage {
         let squares = board.children;
         for (let i = 0; i < 9; i++) {
             console.log(this.getMark(i%3, Math.floor(i/3)));
-            squares[i].textContent = this.getMark(i/3, Math.floor(i%3)) != null ? this.getMark(i/3, Math.floor(i%3)) : '';
+            squares[i].textContent = this.getMark(i%3, Math.floor(i/3)) != null ? this.getMark(i%3, Math.floor(i/3)) : '';
         }
     }
 
@@ -50,10 +50,10 @@ class TictactoePage {
         if(!selectedColumn || !selectedRow) {
             return;
         }
-        if (this.game.gameOver(selectedColumn, selectedRow) == 0) {
-            this.game.playRound(selectedColumn, selectedRow);
+        if (this.game.gameOver(selectedRow, selectedColumn) == 0) {
+            this.game.playRound(selectedRow, selectedColumn);
             this.updateBoard();
-            if (this.game.gameOver(selectedColumn,selectedRow) != 0) {
+            if (this.game.gameOver(selectedRow,selectedColumn) != 0) {
                 this.board.removeEventListener("click", this.clickHandler);
                 // Add messages and check for tie, move this to new 'end' function
             }
