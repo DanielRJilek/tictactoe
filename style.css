@@ -335,7 +335,7 @@ h1 {
     visibility: visible;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
-    transition-property: left;
+    transition-property: right;
 }
 
 .tictactoe-square {

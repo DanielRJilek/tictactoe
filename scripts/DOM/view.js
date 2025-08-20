@@ -40,9 +40,9 @@ class View {
         let curtain_left = document.querySelector(".curtain-left");
         let curtain_right = document.querySelector(".curtain-right");
         curtain_left.classList.add("loading");
-        curtain_left.classList.remove("notloading");
+        // curtain_left.classList.remove("notloading");
         curtain_right.classList.add("loading");
-        curtain_right.classList.remove("notloading");
+        // curtain_right.classList.remove("notloading");
         setTimeout(() => {
             curtain_left.classList.remove("loading");
             curtain_left.classList.add("notloading");
@@ -62,9 +62,9 @@ class View {
         let curtain_left = document.querySelector(".curtain-left");
         let curtain_right = document.querySelector(".curtain-right");
         curtain_left.classList.add("loading");
-        curtain_left.classList.remove("notloading");
+        // curtain_left.classList.remove("notloading");
         curtain_right.classList.add("loading");
-        curtain_right.classList.remove("notloading");
+        // curtain_right.classList.remove("notloading");
         setTimeout(() => {
             curtain_left.classList.remove("loading");
             curtain_left.classList.add("notloading");
@@ -83,9 +83,9 @@ class View {
         let curtain_left = document.querySelector(".curtain-left");
         let curtain_right = document.querySelector(".curtain-right");
         curtain_left.classList.add("loading");
-        curtain_left.classList.remove("notloading");
+        // curtain_left.classList.remove("notloading");
         curtain_right.classList.add("loading");
-        curtain_right.classList.remove("notloading");
+        // curtain_right.classList.remove("notloading");
         setTimeout(() => {
             curtain_left.classList.remove("loading");
             curtain_left.classList.add("notloading");
@@ -108,9 +108,9 @@ class View {
         let curtain_left = document.querySelector(".curtain-left");
         let curtain_right = document.querySelector(".curtain-right");
         curtain_left.classList.add("loading");
-        curtain_left.classList.remove("notloading");
+        // curtain_left.classList.remove("notloading");
         curtain_right.classList.add("loading");
-        curtain_right.classList.remove("notloading");
+        // curtain_right.classList.remove("notloading");
         setTimeout(() => {
             curtain_left.classList.remove("loading");
             curtain_left.classList.add("notloading");
@@ -131,9 +131,9 @@ class View {
         let curtain_left = document.querySelector(".curtain-left");
         let curtain_right = document.querySelector(".curtain-right");
         curtain_left.classList.add("loading");
-        curtain_left.classList.remove("notloading");
+        // curtain_left.classList.remove("notloading");
         curtain_right.classList.add("loading");
-        curtain_right.classList.remove("notloading");
+        // curtain_right.classList.remove("notloading");
         setTimeout(() => {
             curtain_left.classList.remove("loading");
             curtain_left.classList.add("notloading");
@@ -154,9 +154,9 @@ class View {
         let curtain_left = document.querySelector(".curtain-left");
         let curtain_right = document.querySelector(".curtain-right");
         curtain_left.classList.add("loading");
-        curtain_left.classList.remove("notloading");
+        // curtain_left.classList.remove("notloading");
         curtain_right.classList.add("loading");
-        curtain_right.classList.remove("notloading");
+        // curtain_right.classList.remove("notloading");
         setTimeout(() => {
             curtain_left.classList.remove("loading");
             curtain_left.classList.add("notloading");
@@ -177,9 +177,9 @@ class View {
         let curtain_left = document.querySelector(".curtain-left");
         let curtain_right = document.querySelector(".curtain-right");
         curtain_left.classList.add("loading");
-        curtain_left.classList.remove("notloading");
+        // curtain_left.classList.remove("notloading");
         curtain_right.classList.add("loading");
-        curtain_right.classList.remove("notloading");
+        // curtain_right.classList.remove("notloading");
         setTimeout(() => {
             curtain_left.classList.remove("loading");
             curtain_left.classList.add("notloading");
