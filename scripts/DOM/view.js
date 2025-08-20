@@ -38,9 +38,11 @@ class View {
     // refactor into one 'render' method 
     renderTitlePage() {
         let curtain_left = document.querySelector(".curtain-left");
-        curtain_left.classList.add("loading");
         let curtain_right = document.querySelector(".curtain-right");
         curtain_left.classList.add("loading");
+        curtain_left.classList.remove("notloading");
+        curtain_right.classList.add("loading");
+        curtain_right.classList.remove("notloading");
         setTimeout(() => {
             curtain_left.classList.remove("loading");
             curtain_left.classList.add("notloading");
@@ -57,11 +59,17 @@ class View {
     }
 
     renderGameList() {
-        let curtain = document.querySelector(".curtain");
-        curtain.classList.add("loading");
+        let curtain_left = document.querySelector(".curtain-left");
+        let curtain_right = document.querySelector(".curtain-right");
+        curtain_left.classList.add("loading");
+        curtain_left.classList.remove("notloading");
+        curtain_right.classList.add("loading");
+        curtain_right.classList.remove("notloading");
         setTimeout(() => {
-            curtain.classList.remove("loading");
-            curtain.classList.add("notloading");
+            curtain_left.classList.remove("loading");
+            curtain_left.classList.add("notloading");
+            curtain_right.classList.remove("loading");
+            curtain_right.classList.add("notloading");
         }, 600);
 
         setTimeout(() => {
@@ -72,10 +80,17 @@ class View {
     }
 
     renderAboutPage() {
-        let curtain = document.querySelector(".curtain");
-        curtain.classList.add("loading");
+        let curtain_left = document.querySelector(".curtain-left");
+        let curtain_right = document.querySelector(".curtain-right");
+        curtain_left.classList.add("loading");
+        curtain_left.classList.remove("notloading");
+        curtain_right.classList.add("loading");
+        curtain_right.classList.remove("notloading");
         setTimeout(() => {
-            curtain.classList.remove("loading");
+            curtain_left.classList.remove("loading");
+            curtain_left.classList.add("notloading");
+            curtain_right.classList.remove("loading");
+            curtain_right.classList.add("notloading");
         }, 600);
 
         setTimeout(() => {
@@ -90,10 +105,17 @@ class View {
     renderTictactoe() {
         let fanfare = new Audio('./assets/audio/medieval-fanfare.mp3')
         fanfare.play();
-        let curtain = document.querySelector(".curtain");
-        curtain.classList.add("loading");
+        let curtain_left = document.querySelector(".curtain-left");
+        let curtain_right = document.querySelector(".curtain-right");
+        curtain_left.classList.add("loading");
+        curtain_left.classList.remove("notloading");
+        curtain_right.classList.add("loading");
+        curtain_right.classList.remove("notloading");
         setTimeout(() => {
-            curtain.classList.remove("loading");
+            curtain_left.classList.remove("loading");
+            curtain_left.classList.add("notloading");
+            curtain_right.classList.remove("loading");
+            curtain_right.classList.add("notloading");
         }, 600);
 
         setTimeout(() => {
@@ -106,10 +128,17 @@ class View {
     renderNineMorris() {
         let fanfare = new Audio('./assets/audio/medieval-fanfare.mp3')
         fanfare.play();
-        let curtain = document.querySelector(".curtain");
-        curtain.classList.add("loading");
+        let curtain_left = document.querySelector(".curtain-left");
+        let curtain_right = document.querySelector(".curtain-right");
+        curtain_left.classList.add("loading");
+        curtain_left.classList.remove("notloading");
+        curtain_right.classList.add("loading");
+        curtain_right.classList.remove("notloading");
         setTimeout(() => {
-            curtain.classList.remove("loading");
+            curtain_left.classList.remove("loading");
+            curtain_left.classList.add("notloading");
+            curtain_right.classList.remove("loading");
+            curtain_right.classList.add("notloading");
         }, 600);
 
         setTimeout(() => {
@@ -122,10 +151,17 @@ class View {
     renderAlquerque() {
         let fanfare = new Audio('./assets/audio/medieval-fanfare.mp3')
         fanfare.play();
-        let curtain = document.querySelector(".curtain");
-        curtain.classList.add("loading");
+        let curtain_left = document.querySelector(".curtain-left");
+        let curtain_right = document.querySelector(".curtain-right");
+        curtain_left.classList.add("loading");
+        curtain_left.classList.remove("notloading");
+        curtain_right.classList.add("loading");
+        curtain_right.classList.remove("notloading");
         setTimeout(() => {
-            curtain.classList.remove("loading");
+            curtain_left.classList.remove("loading");
+            curtain_left.classList.add("notloading");
+            curtain_right.classList.remove("loading");
+            curtain_right.classList.add("notloading");
         }, 600);
 
         setTimeout(() => {
@@ -138,10 +174,17 @@ class View {
     renderDoblet() {
         let fanfare = new Audio('./assets/audio/medieval-fanfare.mp3')
         fanfare.play();
-        let curtain = document.querySelector(".curtain");
-        curtain.classList.add("loading");
+        let curtain_left = document.querySelector(".curtain-left");
+        let curtain_right = document.querySelector(".curtain-right");
+        curtain_left.classList.add("loading");
+        curtain_left.classList.remove("notloading");
+        curtain_right.classList.add("loading");
+        curtain_right.classList.remove("notloading");
         setTimeout(() => {
-            curtain.classList.remove("loading");
+            curtain_left.classList.remove("loading");
+            curtain_left.classList.add("notloading");
+            curtain_right.classList.remove("loading");
+            curtain_right.classList.add("notloading");
         }, 600);
 
         setTimeout(() => {
@@ -167,4 +210,5 @@ class View {
     }
 }
 
+// Refactor curtain into its own method
 export {View}
