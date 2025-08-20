@@ -77,7 +77,7 @@ class TictactoePage {
     async render() {
         const tictactoe = document.createElement("div");
         tictactoe.classList.add("game-page");
-        tictactoe.classList.add("add");
+        tictactoe.classList.add("page");
         tictactoe.setAttribute("id", "tictactoe-page");
 
         const holder = document.createElement("div");
