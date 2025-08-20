@@ -165,8 +165,6 @@ class View {
         }, 500);
         return 1;
     }
-
-    
 }
 
 export {View}
