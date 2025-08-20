@@ -35,6 +35,7 @@ class TitlePage {
     render() {
         const title_page = document.createElement("div");
         title_page.setAttribute("id", "title-page");
+        title_page.classList.add("page");
         // createTitle(title_page);
         this.createTitle(title_page);
         this.createButtons(title_page);

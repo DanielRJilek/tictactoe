@@ -99,6 +99,7 @@ class AboutPage {
     async render() {
         const about_page = document.createElement("div");
         about_page.setAttribute("id", "about-page");
+        about_page.classList.add("page");
         await this.createContent(about_page);
         this.createButtons(about_page);
         this.container.appendChild(about_page);

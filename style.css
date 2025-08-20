@@ -8,6 +8,42 @@
     src:url(./Tangerine/Tangerine-Regular.ttf);
 }
 
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slow-fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+.fade-out {
+    animation-name: fade-out;
+    animation-duration: 1s;
+}
+
+@keyframes fade-out {
+    from {opacity:1}
+    to {opacity:0}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes slideInOut {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -22,6 +58,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: auto;
+    position: absolute;
+    inset: 0;
 }
 
 #title-page,
@@ -37,11 +75,7 @@ body {
     grid-template-rows: 5fr 1fr;
 }
 
-#title-page,
-#list-page,
-#about-page,
-#music-page,
-.game-page {
+.page {
     min-height: 100vh;
     min-width: 100vw;
     font-family: tangerine-bold;
@@ -68,11 +102,7 @@ body {
     color: rgb(63, 32, 9)
 }
 
-#title-page button,
-#list-page button,
-#about-page button,
-#music-page button,
-.game-page button {
+.page button {
     max-width: 15vw;
     min-width: 260px;
     max-height: 70px;
@@ -92,11 +122,7 @@ body {
     margin: 0 auto;
 }
 
-#title-page button:hover,
-#list-page button:hover,
-#about-page button:hover,
-#music-page button:hover,
-.game-page button:hover {
+.page button:hover {
     box-shadow: 0 0 10px darkorange;
 }
 
@@ -186,30 +212,6 @@ h1 {
     grid-row: 1;
 }
 
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-.slow-fade {
-  animation-name: fade;
-  animation-duration: 3s;
-}
-
-.fade-out {
-    animation-name: fade-out;
-    animation-duration: 1s;
-}
-
-@keyframes fade-out {
-    from {opacity:1}
-    to {opacity:0}
-}
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
 #about-text {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 16px;
@@ -256,19 +258,13 @@ h1 {
     margin: auto;
 }
 
-.row0 {
-    border-bottom: 2px solid black;
-}
-
+.row0,
 .row1 {
     border-bottom: 2px solid black;
 }
 
-.column0 {
-    border-right: 2px solid black;
-}
-
-.column1 {
+.column0,
+.column2 {
     border-right: 2px solid black;
 }
 
@@ -284,7 +280,7 @@ h1 {
 }
 
 .game-page .popup {
-    grid-row: 3;
+    grid-row: 2;
     grid-column: 3;
     z-index: 1;
     visibility: hidden;
@@ -294,42 +290,48 @@ h1 {
     visibility: visible;
 }
 
-.container {
-    position: absolute;
-    inset: 0;
-}
-
-@keyframes slideInOut {
-    0% {
-        transform: translateX(0%);
-    }
-    50% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-
 /* MAKE LEFT AND RIGHT CURTAIN */
 
-.curtain {
+.curtain-left {
     position: absolute;
     background-color: black;
     z-index: 100;
     
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 50vw;
     height: 100%;
-    left: -100%;
+    left: -50%;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
     transition-property: left;
     /* visibility: hidden; */
 }
 
-.curtain.loading {
+.curtain-left.loading {
     left: 0%;
+    visibility: visible;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    transition-property: left;
+}
+
+.curtain-right {
+    position: absolute;
+    background-color: black;
+    z-index: 100;
+    
+    min-height: 100vh;
+    min-width: 50vw;
+    height: 100%;
+    left: 150%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    transition-property: left;
+    /* visibility: hidden; */
+}
+
+.curtain-right.loading {
+    left: 50%;
     visibility: visible;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;

@@ -100,6 +100,7 @@ class MusicPage {
     async render() {
         const music_page = document.createElement("div");
         music_page.setAttribute("id", "music-page");
+        music_page.classList.add("page");
         await this.createContent(music_page);
         this.createButtons(music_page);
         this.container.appendChild(music_page);

@@ -55,6 +55,7 @@ class GameList {
         this.images = (await this.getFileContent("./assets/game_images.txt")).split("\n");
         const title_page = document.createElement("div");
         title_page.setAttribute("id", "list-page");
+        title_page.classList.add("page");
         this.imageHolder.setAttribute("id", "image-holder");
         title_page.append(this.imageHolder);
         const buttonHolder = document.createElement("div");

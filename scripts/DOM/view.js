@@ -37,11 +37,15 @@ class View {
 
     // refactor into one 'render' method 
     renderTitlePage() {
-        let curtain = document.querySelector(".curtain");
-        curtain.classList.add("loading");
+        let curtain_left = document.querySelector(".curtain-left");
+        curtain_left.classList.add("loading");
+        let curtain_right = document.querySelector(".curtain-right");
+        curtain_left.classList.add("loading");
         setTimeout(() => {
-            curtain.classList.remove("loading");
-            curtain.classList.add("notloading");
+            curtain_left.classList.remove("loading");
+            curtain_left.classList.add("notloading");
+            curtain_right.classList.remove("loading");
+            curtain_right.classList.add("notloading");
         }, 600);
 
         setTimeout(() => {
