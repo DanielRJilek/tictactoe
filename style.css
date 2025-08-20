@@ -323,15 +323,15 @@ h1 {
     min-height: 100vh;
     min-width: 50vw;
     height: 100%;
-    left: 150%;
+    right: 100%;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
-    transition-property: left;
+    transition-property: right;
     /* visibility: hidden; */
 }
 
 .curtain-right.loading {
-    left: 50%;
+    right: 50%;
     visibility: visible;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
