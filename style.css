@@ -58,7 +58,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    overflow: auto;
+    /* overflow: auto; */
     position: absolute;
     inset: 0;
 }
